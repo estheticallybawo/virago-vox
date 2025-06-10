@@ -9,11 +9,15 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { FaShareAlt, FaBookmark, FaArrowRight, FaQuoteLeft, FaPen, FaFacebook, FaTwitter, FaBookOpen, FaBullhorn, FaMicrophoneAlt,FaUserFriends, FaPenFancy  } from "react-icons/fa";
 import * as echarts from 'echarts';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Image from 'next/image';
+
 
 const App = () => {
   const [email, setEmail] = useState('');
@@ -96,7 +100,7 @@ const App = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-amber-500 bg-clip-text text-transparent">ViragoVOX</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-teal-500 bg-clip-text text-transparent">ViragoVOX</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -115,23 +119,23 @@ const App = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://readdy.ai/api/search-image?query=A%20powerful%20abstract%20background%20with%20purple%20and%20gold%20gradient%20colors%2C%20showing%20silhouettes%20of%20diverse%20women%20throughout%20history%2C%20with%20subtle%20document%20textures%20and%20archival%20elements%2C%20creating%20a%20sense%20of%20legacy%20and%20timelessness%2C%20professional%20photography%20with%20dramatic%20lighting&width=1440&height=800&seq=hero-bg-1&orientation=landscape" 
+          <Image
+            src="./GoldenCrown.png" 
             alt="Women throughout history background" 
             className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-purple-800/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-700/90 via-purple-900/70 to-transparent"></div>
         </div>
         
         <div className="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-7xl">
           <div className="max-w-2xl text-white">
-            <p className="text-amber-300 font-medium mb-3 text-lg">History is being written right now. Who's telling your story?</p>
+            <p className="text-amber-400 font-medium mb-3 text-lg">History is being written right now. Who's telling your story?</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Rewriting History Through Women's Voices</h1>
             <p className="text-xl mb-8 text-purple-50">Not another women's platform. A cultural revolution in digital permanence.</p>
             <p className="text-lg mb-10 text-purple-100">ViragoVOX exists to correct the record and spotlight the brilliance of women who shaped the world, yet too often went unrecognized.</p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap">
+              <Button className="bg-teal-500 hover:bg-teal-300 text-purple-900 font-bold text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap">
                 Shape History Now (2 min)
               </Button>
               <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap">
@@ -152,8 +156,8 @@ const App = () => {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="rounded-2xl overflow-hidden shadow-xl h-[500px]">
-              <img 
-                src="https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20a%20confident%20middle-aged%20Black%20woman%20scientist%20in%20a%20lab%20coat%2C%20standing%20in%20a%20modern%20laboratory%20with%20scientific%20equipment%2C%20soft%20natural%20lighting%20highlighting%20her%20determined%20expression%2C%20neutral%20background%20that%20emphasizes%20her%20presence%2C%20photorealistic%20style&width=600&height=800&seq=featured-woman-1&orientation=portrait" 
+              <Image  
+                src="./Mai.jpg" 
                 alt="Portrait of Dr. Mae Jemison, astronaut and physician" 
                 className="w-full h-full object-cover object-top"
               />
@@ -162,7 +166,7 @@ const App = () => {
             <div className="p-6">
               <div className="mb-4">
                 <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Science & Space</span>
-                <span className="ml-3 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">1956 - Present</span>
+                <span className="ml-3 bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">1956 - Present</span>
               </div>
               
               <h3 className="text-3xl font-bold mb-4">Dr. Mae Jemison</h3>
@@ -171,17 +175,17 @@ const App = () => {
               <p className="text-gray-700 mb-8">Beyond her groundbreaking space mission, Dr. Jemison founded The Jemison Group, a technology consulting firm. She's also the principal of the 100 Year Starship project, working to ensure human interstellar space travel capabilities within the next century. Her work spans medicine, technology, education, and social science, embodying the interdisciplinary approach needed to solve humanity's greatest challenges.</p>
               
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">Read Her Full Story</Button>
+                <Button className="bg-purple-700 hover:bg-purple-800 text-white !rounded-button cursor-pointer whitespace-nowrap">Read Her Full Story</Button>
                 
                 <div className="flex space-x-2">
                   <Button variant="outline" size="icon" className="rounded-full border-gray-300 !rounded-button cursor-pointer whitespace-nowrap">
-                    <i className="fas fa-share-alt"></i>
+                    <FaShareAlt />
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full border-gray-300 !rounded-button cursor-pointer whitespace-nowrap">
-                    <i className="fab fa-twitter"></i>
+                    <FaTwitter />
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full border-gray-300 !rounded-button cursor-pointer whitespace-nowrap">
-                    <i className="fab fa-facebook"></i>
+                   <FaFacebook />
                   </Button>
                 </div>
               </div>
@@ -201,8 +205,8 @@ const App = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-purple-100 shadow-md hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
-                  <i className="fas fa-book-open text-xl"></i>
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 mb-4">
+                  < FaBookOpen  className="text-xl"/>
                 </div>
                 <CardTitle>Archive</CardTitle>
                 <CardDescription>Preserving stories that matter</CardDescription>
@@ -214,8 +218,8 @@ const App = () => {
             
             <Card className="border-purple-100 shadow-md hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
-                  <i className="fas fa-bullhorn text-xl"></i>
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 mb-4">
+                  <FaBullhorn className="text-xl"/>
                 </div>
                 <CardTitle>Amplify</CardTitle>
                 <CardDescription>Giving voice to the overlooked</CardDescription>
@@ -227,8 +231,8 @@ const App = () => {
             
             <Card className="border-purple-100 shadow-md hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
-                  <i className="fas fa-pen text-xl"></i>
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 mb-4">
+                  <FaPen className="text-xl"/>
                 </div>
                 <CardTitle>Rewrite</CardTitle>
                 <CardDescription>Correcting the historical record</CardDescription>
@@ -250,8 +254,8 @@ const App = () => {
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <h4 className="text-xl font-semibold mb-2 flex items-center">
-                    <span className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-2">
-                      <i className="fas fa-quote-left text-sm"></i>
+                    <span className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 mr-2">
+                      <FaQuoteLeft className="text-sm"/>
                     </span>
                     Our Manifesto
                   </h4>
@@ -263,7 +267,7 @@ const App = () => {
                   </ScrollArea>
                 </div>
                 
-                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-6 !rounded-button cursor-pointer whitespace-nowrap">
+                <Button className="w-full bg-purple-700 hover:bg-purple-800 text-white py-6 !rounded-button cursor-pointer whitespace-nowrap">
                   Join the Movement
                 </Button>
               </div>
@@ -296,26 +300,26 @@ const App = () => {
                     category: "Science",
                     era: "1867-1934",
                     description: "Physicist and chemist who conducted pioneering research on radioactivity, becoming the first woman to win a Nobel Prize and the only person to win Nobel Prizes in multiple scientific fields.",
-                    image: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Marie%20Curie%20in%20her%20laboratory%2C%20wearing%20period-appropriate%20clothing%20from%20early%201900s%2C%20surrounded%20by%20scientific%20equipment%2C%20with%20a%20serious%20expression%20conveying%20her%20dedication%20to%20science%2C%20neutral%20background%20with%20subtle%20laboratory%20elements%2C%20photorealistic%20style&width=400&height=500&seq=marie-curie-1&orientation=portrait"
+                    image: "./Physicist.jpg"
                   },
                   {
                     name: "Frida Kahlo",
                     category: "Arts",
                     era: "1907-1954",
                     description: "Mexican painter known for her many portraits, self-portraits, and works inspired by nature and artifacts of Mexico, exploring questions of identity, gender, class, and race.",
-                    image: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Frida%20Kahlo%20in%20traditional%20Mexican%20attire%20with%20her%20iconic%20flower%20crown%2C%20vibrant%20colors%20and%20traditional%20Mexican%20elements%20in%20background%2C%20capturing%20her%20intense%20gaze%20and%20strong%20presence%2C%20photorealistic%20style%20with%20attention%20to%20her%20distinctive%20features&width=400&height=500&seq=frida-kahlo-1&orientation=portrait"
+                    image: "./Mexican.jpg"
                   },
                   {
-                    name: "Wangari Maathai",
+                    name: "Wangar Maathai",
                     category: "Environment",
                     era: "1940-2011",
                     description: "Kenyan environmental and political activist who founded the Green Belt Movement and became the first African woman to receive the Nobel Peace Prize.",
-                    image: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Wangari%20Maathai%20smiling%20while%20planting%20a%20tree%2C%20wearing%20colorful%20traditional%20Kenyan%20clothing%2C%20in%20a%20natural%20outdoor%20setting%20with%20trees%20and%20greenery%20in%20the%20background%2C%20warm%20natural%20lighting%20highlighting%20her%20joyful%20expression%2C%20photorealistic%20style&width=400&height=500&seq=wangari-maathai-1&orientation=portrait"
+                    image: "./African.jpg"
                   }
                 ].map((woman, index) => (
                   <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
                     <div className="h-64 overflow-hidden">
-                      <img 
+                      <Image  
                         src={woman.image} 
                         alt={`Portrait of ${woman.name}`} 
                         className="w-full h-full object-cover object-top"
@@ -327,8 +331,8 @@ const App = () => {
                           <CardTitle>{woman.name}</CardTitle>
                           <CardDescription>{woman.category} • {woman.era}</CardDescription>
                         </div>
-                        <Button variant="ghost" size="icon" className="rounded-full text-purple-600 hover:text-purple-800 hover:bg-purple-100 !rounded-button cursor-pointer whitespace-nowrap">
-                          <i className="fas fa-bookmark"></i>
+                        <Button variant="ghost" size="icon" className="rounded-full text-purple-700 hover:text-purple-800 hover:bg-purple-100 !rounded-button cursor-pointer whitespace-nowrap">
+                          <FaBookmark/>
                         </Button>
                       </div>
                     </CardHeader>
@@ -343,7 +347,7 @@ const App = () => {
               </div>
               
               <div className="text-center">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
+                <Button className="bg-purple-700 hover:bg-purple-800 text-white !rounded-button cursor-pointer whitespace-nowrap">
                   Explore More Profiles
                 </Button>
               </div>
@@ -363,8 +367,8 @@ const App = () => {
                 ].map((category, index) => (
                   <Card key={index} className="cursor-pointer hover:shadow-md transition-shadow">
                     <CardHeader>
-                      <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-2">
-                        <i className={`${category.icon} text-xl`}></i>
+                      <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 mb-2">
+                        <Icon icon={`${category.icon} text-xl`}/>
                       </div>
                       <CardTitle className="text-lg">{category.name}</CardTitle>
                     </CardHeader>
@@ -378,7 +382,7 @@ const App = () => {
             
             <TabsContent value="eras">
               <div className="relative h-20 mb-8">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-200 via-amber-200 to-purple-200 rounded-full h-2 top-1/2 -translate-y-1/2"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-200 via-teal-200 to-purple-200 rounded-full h-2 top-1/2 -translate-y-1/2"></div>
                 {[
                   { era: "Ancient", position: "0%" },
                   { era: "Medieval", position: "20%" },
@@ -388,7 +392,7 @@ const App = () => {
                   { era: "Contemporary", position: "100%" }
                 ].map((item, index) => (
                   <div key={index} className="absolute cursor-pointer" style={{ left: item.position, top: '50%', transform: 'translate(-50%, -50%)' }}>
-                    <div className="w-4 h-4 bg-purple-600 rounded-full mb-2"></div>
+                    <div className="w-4 h-4 bg-purple-700 rounded-full mb-2"></div>
                     <p className="text-sm font-medium whitespace-nowrap">{item.era}</p>
                   </div>
                 ))}
@@ -412,8 +416,8 @@ const App = () => {
                       <p>{era.count} women profiled from this period</p>
                     </CardContent>
                     <CardFooter>
-                      <Button variant="ghost" className="text-purple-600 hover:text-purple-800 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">
-                        Explore Era <i className="fas fa-arrow-right ml-2"></i>
+                      <Button variant="ghost" className="text-purple-700 hover:text-purple-800 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">
+                        Explore Era <FaArrowRight  className="ml-2"/>
                       </Button>
                     </CardFooter>
                   </Card>
@@ -424,16 +428,16 @@ const App = () => {
             <TabsContent value="regions">
               <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  { region: "Africa", count: 124, image: "https://readdy.ai/api/search-image?query=A%20stylized%20map%20or%20cultural%20representation%20of%20Africa%20with%20subtle%20traditional%20patterns%20and%20symbols%20from%20various%20African%20cultures%2C%20in%20purple%20and%20gold%20color%20scheme%2C%20abstract%20artistic%20style%20with%20clean%20lines%20and%20minimal%20details%2C%20on%20neutral%20background&width=400&height=300&seq=africa-map-1&orientation=landscape" },
-                  { region: "Asia", count: 187, image: "https://readdy.ai/api/search-image?query=A%20stylized%20map%20or%20cultural%20representation%20of%20Asia%20with%20subtle%20traditional%20patterns%20and%20symbols%20from%20various%20Asian%20cultures%2C%20in%20purple%20and%20gold%20color%20scheme%2C%20abstract%20artistic%20style%20with%20clean%20lines%20and%20minimal%20details%2C%20on%20neutral%20background&width=400&height=300&seq=asia-map-1&orientation=landscape" },
-                  { region: "Europe", count: 203, image: "https://readdy.ai/api/search-image?query=A%20stylized%20map%20or%20cultural%20representation%20of%20Europe%20with%20subtle%20traditional%20patterns%20and%20symbols%20from%20various%20European%20cultures%2C%20in%20purple%20and%20gold%20color%20scheme%2C%20abstract%20artistic%20style%20with%20clean%20lines%20and%20minimal%20details%2C%20on%20neutral%20background&width=400&height=300&seq=europe-map-1&orientation=landscape" },
-                  { region: "North America", count: 156, image: "https://readdy.ai/api/search-image?query=A%20stylized%20map%20or%20cultural%20representation%20of%20North%20America%20with%20subtle%20traditional%20patterns%20and%20symbols%20from%20various%20North%20American%20cultures%2C%20in%20purple%20and%20gold%20color%20scheme%2C%20abstract%20artistic%20style%20with%20clean%20lines%20and%20minimal%20details%2C%20on%20neutral%20background&width=400&height=300&seq=north-america-map-1&orientation=landscape" },
-                  { region: "South America", count: 98, image: "https://readdy.ai/api/search-image?query=A%20stylized%20map%20or%20cultural%20representation%20of%20South%20America%20with%20subtle%20traditional%20patterns%20and%20symbols%20from%20various%20South%20American%20cultures%2C%20in%20purple%20and%20gold%20color%20scheme%2C%20abstract%20artistic%20style%20with%20clean%20lines%20and%20minimal%20details%2C%20on%20neutral%20background&width=400&height=300&seq=south-america-map-1&orientation=landscape" },
-                  { region: "Oceania", count: 67, image: "https://readdy.ai/api/search-image?query=A%20stylized%20map%20or%20cultural%20representation%20of%20Oceania%20with%20subtle%20traditional%20patterns%20and%20symbols%20from%20various%20Oceanian%20cultures%2C%20in%20purple%20and%20gold%20color%20scheme%2C%20abstract%20artistic%20style%20with%20clean%20lines%20and%20minimal%20details%2C%20on%20neutral%20background&width=400&height=300&seq=oceania-map-1&orientation=landscape" }
+                  { region: "Africa", count: 124, image: "./Africa.jpg" },
+                  { region: "Asia", count: 187, image: "./Asia.jpg" },
+                  { region: "Europe", count: 203, image: "./Europe.jpg" },
+                  { region: "North America", count: 156, image: "./North.jpg" },
+                  { region: "South America", count: 98, image: "./South.jpg" },
+                  { region: "Oceania", count: 67, image: "./Oceania.jpg" }
                 ].map((region, index) => (
                   <Card key={index} className="overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
                     <div className="h-48 overflow-hidden">
-                      <img 
+                      <Image  
                         src={region.image} 
                         alt={`Stylized representation of ${region.region}`} 
                         className="w-full h-full object-cover object-top"
@@ -444,8 +448,8 @@ const App = () => {
                       <CardDescription>{region.count} women profiled</CardDescription>
                     </CardHeader>
                     <CardFooter>
-                      <Button variant="ghost" className="text-purple-600 hover:text-purple-800 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">
-                        Explore Region <i className="fas fa-arrow-right ml-2"></i>
+                      <Button variant="ghost" className="text-purple-700 hover:text-purple-800 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">
+                        Explore Region <FaArrowRight className="ml-2"/>
                       </Button>
                     </CardFooter>
                   </Card>
@@ -455,123 +459,47 @@ const App = () => {
           </Tabs>
         </div>
       </section>
-
-      {/* Podcast Section */}
+      
+{/* Podcast Section - Coming Soon */}
       <section id="podcast" className="py-20 bg-purple-900 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">The ViragoVOX Podcast</h2>
-              <p className="text-xl mb-6 text-purple-100">Spotlighting change-makers and hidden heroines across time through intimate conversations and compelling storytelling.</p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="w-20 h-20 rounded-full bg-amber-500 flex items-center justify-center mx-auto mb-8">
+              <FaMicrophoneAlt className="text-purple-900 text-3xl"/>
               
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-microphone text-purple-900"></i>
+            </div>
+            <h2 className="text-3xl font-bold mb-6">The ViragoVOX Podcast</h2>
+            <p className="text-xl mb-8 text-purple-100">
+              Coming Soon! We're crafting compelling stories about remarkable
+              women throughout history.
+            </p>
+            <div className="bg-purple-800/50 rounded-xl p-8 mb-8">
+              <h3 className="text-lg font-semibold mb-4">What to Expect</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-3">
+                    <FaUserFriends className="text-amber-300"/>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">In-depth Interviews</h3>
-                    <p className="text-purple-200">Conversations with living legends and experts on historical figures.</p>
-                  </div>
+                  <p className="text-purple-200">In-depth Interviews</p>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-book text-purple-900"></i>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Historical Deep Dives</h3>
-                    <p className="text-purple-200">Narrative episodes exploring forgotten women who changed history.</p>
-                  </div>
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-3">
+                    <FaBookOpen className="text-amber-300" />
+                  <p className="text-purple-200">Historical Deep Dives</p>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-users text-purple-900"></i>
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-3">
+                    <FaUserFriends className="text-amber-300"/>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Community Stories</h3>
-                    <p className="text-purple-200">Featuring submissions from our community about impactful women in their lives.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-4">
-                <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
-                  <i className="fas fa-headphones mr-2"></i> Listen Now
-                </Button>
-                
-                <div className="flex space-x-3">
-                  <Button variant="outline" size="icon" className="rounded-full border-purple-400 hover:bg-purple-800 text-white !rounded-button cursor-pointer whitespace-nowrap">
-                    <i className="fab fa-spotify"></i>
-                  </Button>
-                  <Button variant="outline" size="icon" className="rounded-full border-purple-400 hover:bg-purple-800 text-white !rounded-button cursor-pointer whitespace-nowrap">
-                    <i className="fab fa-apple"></i>
-                  </Button>
-                  <Button variant="outline" size="icon" className="rounded-full border-purple-400 hover:bg-purple-800 text-white !rounded-button cursor-pointer whitespace-nowrap">
-                    <i className="fas fa-podcast"></i>
-                  </Button>
+                  <p className="text-purple-200">Community Stories</p>
                 </div>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="absolute -top-10 -left-10 w-32 h-32 bg-amber-500 rounded-full opacity-20"></div>
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-600 rounded-full opacity-20"></div>
-              
-              <div className="relative bg-purple-800 rounded-2xl p-6 shadow-xl">
-                <h3 className="text-xl font-bold mb-4">Latest Episodes</h3>
-                
-                <div className="space-y-4">
-                  {[
-                    {
-                      title: "The Forgotten Mathematician: Emmy Noether",
-                      date: "June 1, 2025",
-                      duration: "42 min",
-                      image: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Emmy%20Noether%20with%20mathematical%20equations%20and%20formulas%20floating%20around%20her%2C%20in%20a%20library%20or%20academic%20setting%2C%20warm%20lighting%20highlighting%20her%20thoughtful%20expression%2C%20photorealistic%20style%20with%20vintage%20elements%20appropriate%20to%20her%20era&width=100&height=100&seq=emmy-noether-1&orientation=squarish"
-                    },
-                    {
-                      title: "Hedy Lamarr: Hollywood Star and Inventor",
-                      date: "May 25, 2025",
-                      duration: "38 min",
-                      image: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Hedy%20Lamarr%20in%20glamorous%201940s%20Hollywood%20style%2C%20with%20subtle%20technological%20elements%20in%20background%20hinting%20at%20her%20inventions%2C%20dramatic%20lighting%20highlighting%20her%20beauty%20and%20intelligence%2C%20photorealistic%20style%20with%20vintage%20film%20elements&width=100&height=100&seq=hedy-lamarr-1&orientation=squarish"
-                    },
-                    {
-                      title: "The Queens of Ancient Egypt",
-                      date: "May 18, 2025",
-                      duration: "45 min",
-                      image: "https://readdy.ai/api/search-image?query=A%20stylized%20representation%20of%20ancient%20Egyptian%20queens%20with%20traditional%20Egyptian%20art%20elements%2C%20hieroglyphics%2C%20and%20royal%20symbols%2C%20in%20gold%20and%20purple%20color%20palette%2C%20on%20papyrus-like%20background%20texture%2C%20artistic%20style%20inspired%20by%20ancient%20Egyptian%20art&width=100&height=100&seq=egyptian-queens-1&orientation=squarish"
-                    }
-                  ].map((episode, index) => (
-                    <div key={index} className="flex items-center space-x-4 p-3 hover:bg-purple-700/50 rounded-lg cursor-pointer transition-colors">
-                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                        <img 
-                          src={episode.image} 
-                          alt={episode.title} 
-                          className="w-full h-full object-cover object-top"
-                        />
-                      </div>
-                      
-                      <div className="flex-grow min-w-0">
-                        <h4 className="font-medium text-white truncate">{episode.title}</h4>
-                        <p className="text-purple-300 text-sm">{episode.date} • {episode.duration}</p>
-                      </div>
-                      
-                      <Button variant="ghost" size="icon" className="rounded-full text-white hover:bg-purple-700 !rounded-button cursor-pointer whitespace-nowrap">
-                        <i className="fas fa-play"></i>
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="mt-6 pt-4 border-t border-purple-700">
-                  <Button variant="ghost" className="w-full text-purple-200 hover:text-white hover:bg-purple-700/50 !rounded-button cursor-pointer whitespace-nowrap">
-                    View All Episodes <i className="fas fa-arrow-right ml-2"></i>
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
+              Get Notified When We Launch
+            </Button>
           </div>
+        </div>
         </div>
       </section>
 
@@ -582,7 +510,6 @@ const App = () => {
             <h2 className="text-3xl font-bold mb-4">How to Contribute</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Join our community of historians, writers, researchers, and advocates helping to preserve and amplify women's stories.</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="bg-purple-50 rounded-2xl p-8 shadow-sm">
@@ -622,7 +549,7 @@ const App = () => {
                     />
                   </div>
                   
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
+                  <Button className="w-full bg-purple-700 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
                     Submit Survey
                   </Button>
                 </form>
@@ -630,9 +557,9 @@ const App = () => {
             </div>
             
             <div className="order-1 md:order-2 space-y-8">
-              <div className="bg-gradient-to-r from-purple-100 to-amber-100 p-6 rounded-xl">
+              <div className="bg-gradient-to-r from-purple-100 to-teal-100 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <i className="fas fa-pen-fancy text-purple-600 mr-2"></i>
+                  <FaPenFancy className="text-purple-700 mr-2"/>
                   Submit a Story
                 </h3>
                 <p className="mb-4">Have a story about an impactful woman in history or your personal life? Share it with our community and help expand our collective knowledge.</p>
@@ -641,20 +568,20 @@ const App = () => {
                 </Button>
               </div>
               
-              <div className="bg-gradient-to-r from-amber-100 to-purple-100 p-6 rounded-xl">
+              <div className="bg-gradient-to-r from-teal-100 to-purple-100 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <i className="fas fa-search text-amber-600 mr-2"></i>
+                  <FontAwesomeIcon icon="fas fa-search text-teal-600 mr-2"/>
                   Research Volunteer
                 </h3>
                 <p className="mb-4">Join our team of volunteer researchers helping to uncover and document women's stories from archives, historical records, and oral histories.</p>
-                <Button className="bg-white text-amber-700 hover:bg-gray-100 !rounded-button cursor-pointer whitespace-nowrap">
+                <Button className="bg-white text-teal-700 hover:bg-gray-100 !rounded-button cursor-pointer whitespace-nowrap">
                   Apply Now
                 </Button>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-100 to-amber-100 p-6 rounded-xl">
+              <div className="bg-gradient-to-r from-purple-100 to-teal-100 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <i className="fas fa-microphone-alt text-purple-600 mr-2"></i>
+                  <FontAwesomeIcon icon="fas fa-microphone-alt text-purple-700 mr-2"/>
                   Podcast Guest
                 </h3>
                 <p className="mb-4">Are you an expert on women's history or have a personal connection to a remarkable woman's story? We'd love to feature you on our podcast.</p>
@@ -679,7 +606,7 @@ const App = () => {
             <Card className="border-none shadow-md">
               <CardHeader className="pb-2">
                 <CardTitle className="flex items-center">
-                  <i className="fas fa-users text-purple-600 mr-2"></i>
+                  <FontAwesomeIcon icon="fas fa-users text-purple-700 mr-2"/>
                   Community Forum
                 </CardTitle>
               </CardHeader>
@@ -699,7 +626,7 @@ const App = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
+                <Button className="w-full bg-purple-700 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
                   Join Forum
                 </Button>
               </CardFooter>
@@ -708,7 +635,7 @@ const App = () => {
             <Card className="border-none shadow-md">
               <CardHeader className="pb-2">
                 <CardTitle className="flex items-center">
-                  <i className="fas fa-calendar-alt text-purple-600 mr-2"></i>
+                  <FontAwesomeIcon icon="fas fa-calendar-alt text-purple-700 mr-2"/>
                   Events & Workshops
                 </CardTitle>
               </CardHeader>
@@ -726,7 +653,7 @@ const App = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
+                <Button className="w-full bg-purple-700 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
                   View Calendar
                 </Button>
               </CardFooter>
@@ -735,7 +662,7 @@ const App = () => {
             <Card className="border-none shadow-md">
               <CardHeader className="pb-2">
                 <CardTitle className="flex items-center">
-                  <i className="fas fa-envelope text-purple-600 mr-2"></i>
+                  <FontAwesomeIcon icon="fas fa-envelope text-purple-700 mr-2"/>
                   Newsletter
                 </CardTitle>
               </CardHeader>
@@ -752,7 +679,7 @@ const App = () => {
                   />
                   {isSubscribed && (
                     <p className="text-green-600 text-sm">
-                      <i className="fas fa-check mr-1"></i> 
+                      <FontAwesomeIcon icon="fas fa-check mr-1"/>
                       Thank you for subscribing!
                     </p>
                   )}
@@ -762,7 +689,7 @@ const App = () => {
                 <Button 
                   type="submit"
                   onClick={handleSubscribe}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap"
+                  className="w-full bg-purple-700 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap"
                 >
                   Subscribe
                 </Button>
@@ -811,7 +738,7 @@ const App = () => {
                 {
                   name: "Emma Chen",
                   role: "Podcast Listener",
-                  quote: "Each episode of the podcast introduces me to women I should have learned about in school but never did. It's both enlightening and frustrating to realize how much has been omitted from our education.",
+                  quote: "Each episode of the podcast introduces me to women FontAwesomeIconshould have learned about in school but never did. It's both enlightening and frustrating to realize how much has been omitted from our education.",
                   avatar: "E"
                 }
               ].map((testimonial, index) => (
@@ -846,7 +773,7 @@ const App = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto text-purple-100">Join us in building the first platform where women's legacies are preserved with the power, elegance, and clarity they deserve.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-purple-900 font-bold text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap">
               Shape History Now
             </Button>
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap">
@@ -862,22 +789,22 @@ const App = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-amber-300 bg-clip-text text-transparent">ViragoVOX</span>
+                <div className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
+                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-300 bg-clip-text text-transparent">ViragoVOX</span>
               </div>
               <p className="text-gray-400 mb-4">Rewriting history from a woman-centered lens, preserving legacies with the power, elegance, and clarity they deserve.</p>
               <div className="flex space-x-4">
                 <Button variant="ghost" size="icon" className="rounded-full text-gray-400 hover:text-white hover:bg-gray-800 !rounded-button cursor-pointer whitespace-nowrap">
-                  <i className="fab fa-twitter"></i>
+                  <FontAwesomeIcon icon="fab fa-twitter"/>
                 </Button>
                 <Button variant="ghost" size="icon" className="rounded-full text-gray-400 hover:text-white hover:bg-gray-800 !rounded-button cursor-pointer whitespace-nowrap">
-                  <i className="fab fa-instagram"></i>
+                  <FontAwesomeIcon icon="fab fa-instagram"/>
                 </Button>
                 <Button variant="ghost" size="icon" className="rounded-full text-gray-400 hover:text-white hover:bg-gray-800 !rounded-button cursor-pointer whitespace-nowrap">
-                  <i className="fab fa-facebook"></i>
+                  <FontAwesomeIcon icon="fab fa-facebook"/>
                 </Button>
                 <Button variant="ghost" size="icon" className="rounded-full text-gray-400 hover:text-white hover:bg-gray-800 !rounded-button cursor-pointer whitespace-nowrap">
-                  <i className="fab fa-linkedin"></i>
+                  <FontAwesomeIcon icon="fab fa-linkedin"/>
                 </Button>
               </div>
             </div>
@@ -924,9 +851,9 @@ const App = () => {
             <div className="flex items-center space-x-4">
               <span className="text-gray-400 text-sm">Supported by:</span>
               <div className="flex space-x-4">
-                <i className="fab fa-cc-visa text-gray-400 text-xl"></i>
-                <i className="fab fa-cc-mastercard text-gray-400 text-xl"></i>
-                <i className="fab fa-paypal text-gray-400 text-xl"></i>
+                <FontAwesomeIcon icon="fab fa-cc-visa text-gray-400 text-xl"/>
+                <FontAwesomeIcon icon="fab fa-cc-mastercard text-gray-400 text-xl"/>
+                <FontAwesomeIcon icon="fab fa-paypal text-gray-400 text-xl"/>
               </div>
             </div>
           </div>
