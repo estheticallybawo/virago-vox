@@ -1,5 +1,6 @@
 'use client';
-import Waitlist from "./waitlist";
+import Waitlist from "./waitlist/page";
+
 
 
 export default function Page() {

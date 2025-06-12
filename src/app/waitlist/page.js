@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import Link from 'next/link';
 
 
  const Waitlist = () => {
@@ -47,7 +48,7 @@ import { Separator } from "@/components/ui/separator";
             alert('Thank you for joining the waitlist! We will be in touch soon.');
             };
             return (
-            <div className="min-h-[1024px] bg-white text-[#02040F] font-serif">
+            <div className="min-h-[1024px] bg-white text-[#02040F] font-sans">
             {/* Header */}
             <header className="w-full bg-white border-b border-gray-100 fixed top-0 z-50">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -134,19 +135,19 @@ import { Separator } from "@/components/ui/separator";
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Why We're Building ViragoVOX</h2>
             <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-            For centuries, women's contributions have been systematically erased, minimized, or attributed to men. The historical record is incomplete, and we're changing that.
+            For centuries, women's contributions have been systematically ignored, minimized, or attributed to men. The historical record is incomplete, and we're changing that.
             </p>
             <p className="text-lg leading-relaxed">
             With advances in AI and a growing global movement for gender equality, we now have the tools and momentum to correct the historical record at scale.
             </p>
             <p className="text-lg leading-relaxed">
-            ViragoVOX combines human curation with AI assistance to build the most comprehensive archive of women's impact throughout history.
+            ViragoVOX combines human curation with AI assistance to build the most comprehensive archive of women's impact throughout history while inspiring the present with each story of women's impact.
             </p>
             </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
             <img
-            src="https://readdy.ai/api/search-image?query=A%20sophisticated%20editorial-style%20image%20showing%20a%20collection%20of%20historical%20documents%2C%20books%2C%20and%20digital%20archives%20being%20illuminated%2C%20with%20subtle%20feminine%20silhouettes%20in%20the%20background%2C%20representing%20the%20uncovering%20of%20womens%20stories%20throughout%20history%2C%20with%20a%20color%20palette%20of%20soft%20purples%2C%20purples%2C%20and%20amber%20highlights&width=600&height=400&seq=2&orientation=landscape"
+            src="./historical.jpg"
             alt="Historical women's contributions being uncovered"
             className="w-full h-full object-cover object-top"
             />
@@ -215,7 +216,7 @@ import { Separator } from "@/components/ui/separator";
             </div>
             <div className="order-1 md:order-2 relative h-[400px] rounded-lg overflow-hidden">
             <img
-            src="https://readdy.ai/api/search-image?query=A%20modern%2C%20elegant%20visualization%20of%20AI%20technology%20helping%20to%20write%20and%20document%20womens%20stories%2C%20with%20flowing%20data%20streams%20forming%20feminine%20silhouettes%2C%20digital%20text%20elements%2C%20and%20archive%20imagery%2C%20in%20a%20sophisticated%20color%20palette%20of%20purples%2C%20teals%2C%20and%20amber%20against%20a%20clean%20background%2C%20professional%20high-quality%20digital%20art&width=600&height=400&seq=3&orientation=landscape"
+            src="./femaleai.jpg"
             alt="AI-powered story creation visualization"
             className="w-full h-full object-cover object-top"
             />
@@ -234,7 +235,7 @@ import { Separator } from "@/components/ui/separator";
             <p className="text-xl leading-relaxed mb-12">
             We offer custom partnership opportunities for brands that align with our mission of historical correction and gender equality.
             </p>
-            <a href="https://readdy.ai/home/6c68da28-7b7f-4c3b-9018-d811ba65b735/22102e56-459a-4569-8752-b53230036da4" data-readdy="true">
+            <Link href="./partnership" className="inline-block mb-6">
             <Button
             variant="outline"
             size="lg"
@@ -242,7 +243,7 @@ import { Separator } from "@/components/ui/separator";
             >
             Explore Partnerships
             </Button>
-            </a>
+            </Link>
             </div>
             </div>
             </section>
