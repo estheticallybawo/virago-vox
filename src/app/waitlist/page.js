@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import { FaBook, FaBell, FaPenFancy, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedinIn, FaInstagram  } from "react-icons/fa";
 import Link from 'next/link';
 
 
@@ -163,7 +164,7 @@ import Link from 'next/link';
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
             <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-            <i className="fas fa-book text-purple-600 text-xl"></i>
+            <FaBook className=" text-purple-600 text-xl"/>
             </div>
             <h3 className="text-xl font-bold mb-3">Priority Archive Access</h3>
             <p className="text-gray-700">
@@ -174,7 +175,7 @@ import Link from 'next/link';
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
             <div className="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
-            <i className="fas fa-bell text-teal-600 text-xl"></i>
+            <FaBell className=" text-teal-600 text-xl"/>
             </div>
             <h3 className="text-xl font-bold mb-3">Exclusive Updates</h3>
             <p className="text-gray-700">
@@ -185,7 +186,7 @@ import Link from 'next/link';
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
             <div className="h-12 w-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
-            <i className="fas fa-pen-fancy text-amber-600 text-xl"></i>
+            <FaPenFancy className="fas fa-pen-fancy text-amber-600 text-xl"/>
             </div>
             <h3 className="text-xl font-bold mb-3">Contribute Stories</h3>
             <p className="text-gray-700">
@@ -255,10 +256,10 @@ import Link from 'next/link';
             <p className="text-xl text-center mb-12">
             Be among the first to access ViragoVOX when we launch. Your early support helps us build a more complete historical record.
             </p>
-            <Card className="bg-white shadow-lg">
+            <Card className="bg-gray-50 shadow-lg">
             <CardContent className="p-8">
-            <Tabs defaultValue="individual" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
+            <Tabs defaultValue="individual" className="w-full ">
+            <TabsList className="grid w-full grid-cols-2 mb-8 bg-white rounded-lg shadow-sm">
             <TabsTrigger value="individual" className="!rounded-button cursor-pointer whitespace-nowrap">Individual</TabsTrigger>
             <TabsTrigger value="organization" className="!rounded-button cursor-pointer whitespace-nowrap">Organization</TabsTrigger>
             </TabsList>
@@ -487,7 +488,7 @@ import Link from 'next/link';
             </div>
             </section>
             {/* Closing Message */}
-            <section className="py-16 bg-gradient-to-r from-purple-900 to-purple-900 text-white">
+            <section className="py-16 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
             <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Every name matters. Every story shapes the future.</h2>
             <p className="text-xl max-w-3xl mx-auto">
@@ -518,11 +519,11 @@ import Link from 'next/link';
             <h4 className="text-lg font-medium mb-4">Contact</h4>
             <ul className="space-y-2">
             <li className="flex items-center">
-            <i className="fas fa-envelope mr-2 text-purple-400"></i>
+            <FaEnvelope className="mr-2 text-teal-400"/>
             <span>info@viragoxox.com</span>
             </li>
             <li className="flex items-center">
-            <i className="fas fa-map-marker-alt mr-2 text-purple-400"></i>
+            <FaMapMarkerAlt className="mr-2 text-teal-400" />
             <span>Global & Digital</span>
             </li>
             </ul>
@@ -530,14 +531,14 @@ import Link from 'next/link';
             <div>
             <h4 className="text-lg font-medium mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-            <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-purple-600 transition-colors cursor-pointer">
-            <i className="fab fa-twitter text-white"></i>
+            <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+            <FaTwitter className=" text-white"/>
             </a>
-            <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-purple-600 transition-colors cursor-pointer">
-            <i className="fab fa-instagram text-white"></i>
+            <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+            <FaInstagram className=" text-white"/>
             </a>
-            <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-purple-600 transition-colors cursor-pointer">
-            <i className="fab fa-linkedin-in text-white"></i>
+            <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+            <FaLinkedinIn className=" text-white"/>
             </a>
             </div>
             </div>
