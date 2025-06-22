@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+{/* import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -105,7 +105,7 @@ description: "Investing in the next generation of women leaders"
 ];
 return (
 <div className="min-h-screen bg-white">
-{/* Header & Navigation */}
+{/* Header & Navigation */} {/*
 <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
 <div className="container mx-auto px-4 py-4 flex items-center justify-between">
 <div className="flex items-center">
@@ -138,7 +138,7 @@ onChange={(e) => setSearchQuery(e.target.value)}
 </div>
 </header>
 
-{/* Hero Section */}
+{/* Hero Section */} {/* 
 <section className="relative overflow-hidden">
 <div className="absolute inset-0 z-0">
 <img
@@ -162,7 +162,7 @@ Add Her Story <i className="fa-solid fa-arrow-right ml-2"></i>
 </div>
 </div>
 </section>
-{/* Featured Stories Carousel */}
+{/* Featured Stories Carousel */} {/*
 <section className="py-16 bg-gray-50">
 <div className="container mx-auto px-4">
 <div className="flex justify-between items-center mb-10">
@@ -218,7 +218,7 @@ Read full story <i className="fa-solid fa-arrow-right ml-1"></i>
 </Swiper>
 </div>
 </section>
-{/* Search & Filter Section */}
+{/* Search & Filter Section */} {/*
 <section className="py-16 bg-white">
 <div className="container mx-auto px-4">
 <h2 className="text-3xl font-serif font-bold text-gray-900 mb-10 text-center">Explore the Archive</h2>
@@ -342,7 +342,7 @@ Load More Stories <i className="fa-solid fa-chevron-down ml-2"></i>
 </div>
 </div>
 </section>
-{/* Community Submission Portal */}
+{/* Community Submission Portal */} {/*
 <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-teal-50">
 <div className="container mx-auto px-4">
 <div className="max-w-4xl mx-auto">
@@ -492,7 +492,7 @@ Submit Story <i className="fa-solid fa-paper-plane ml-2"></i>
 </div>
 </div>
 </section>
-{/* Partnership Section */}
+{/* Partnership Section */} {/*
 <section className="py-16 bg-white">
 <div className="container mx-auto px-4">
 <div className="text-center mb-12">
@@ -581,7 +581,7 @@ Send Inquiry
 </div>
 </div>
 </section>
-{/* Footer */}
+{/* Footer */} {/*
 <footer className="bg-gray-900 text-white py-12">
 <div className="container mx-auto px-4">
 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -665,4 +665,4 @@ Subscribe
 </div>
 );
 };
-export default App
+export default App*/}
