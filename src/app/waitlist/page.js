@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { FaBook, FaBell, FaPenFancy, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Link from 'next/link';
+import Swal from 'sweetalert2'
 
 const Waitlist = () => {
 const [formData, setFormData] = useState({
@@ -78,9 +79,19 @@ const handleSubmit = async (e, signupType) => {
             if (result.errors) {
                 errorMessage += ' ' + Object.values(result.errors).join(' ');
             }
-            alert(`Error: ${errorMessage}`);
+            //alert(`Error: ${errorMessage}`);
+            Swal.fire({
+           title: 'Error!',
+           text: `A network error occurred. ${errorMessage}`,
+           icon: 'error',
+        })
         } else {
-            alert(result.message || 'Thank you for joining the waitlist!');
+            Swal.fire({
+                  title: 'Success!',
+                  text: 'Thank you for joining the waitlist!',
+                  icon: 'success',
+          });
+            //alert(result.message || 'Thank you for joining the waitlist!');
             setFormData({
                 name: '',
                 email: '',
@@ -96,7 +107,13 @@ const handleSubmit = async (e, signupType) => {
         }
     } catch (error) {
         console.error('Submission failed:', error);
-        alert('A network error occurred. Please check your connection and try again.');
+        //alert('A network error occurred. Please check your connection and try again.');
+        Swal.fire({
+           title: 'Error!',
+           text: 'A network error occurred. Please check your connection and try again',
+           icon: 'error',
+        });
+
     } finally {
         setIsSubmitting(false);
     }
