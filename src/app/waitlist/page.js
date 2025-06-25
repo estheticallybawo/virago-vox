@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { FaBook, FaBell, FaPenFancy, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaBook, FaBell, FaPenFancy, FaEnvelope, FaMapMarkerAlt, FaXTwitter, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 import Link from 'next/link';
 import Swal from 'sweetalert2'
 
@@ -604,15 +604,18 @@ return (
     <div>
     <h4 className="text-lg font-medium mb-4">Follow Us</h4>
     <div className="flex space-x-4">
-    <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-    <FaTwitter className=" text-white"/>
+    <a href="https://x.com/theviragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+    <FaXTwitter className=" text-white"/>
     </a>
-    <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+    <a href="https://www.instagram.com/the_viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
     <FaInstagram className=" text-white"/>
     </a>
-    <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+    <a href="https://www.linkedin.com/company/viragovox/" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
     <FaLinkedinIn className=" text-white"/>
     </a>
+    <a href="https://tiktok.com/@the.viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+        <FaTiktok className=" text-white"/>
+      </a>
     </div>
     </div>
     </div>
@@ -621,11 +624,11 @@ return (
     <p className="text-gray-400 text-sm">
     © 2025 ViragoVOX. All rights reserved.
     </p>
-    <div className="flex space-x-6 mt-4 md:mt-0">
+    {/*<div className="flex space-x-6 mt-4 md:mt-0">
     <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">Privacy Policy</a>
     <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">Terms of Service</a>
     <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">Cookie Policy</a>
-    </div>
+    </div>*/}
     </div>
     </div>
     </footer>

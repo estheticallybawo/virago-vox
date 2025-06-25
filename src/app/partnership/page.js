@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedinIn, FaInstagram, FaBullhorn, FaHandshake, FaUser, FaAward, FaCheck, FaMedal, FaTrophy, FaChartLine, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedinIn, FaInstagram, FaBullhorn, FaHandshake, FaUser, FaAward, FaCheck, FaMedal, FaTrophy, FaChartLine, FaPhone, FaTiktok } from "react-icons/fa";
 import Link from 'next/link';
 
 const PartnershipPage = () => {
@@ -682,15 +682,18 @@ const PartnershipPage = () => {
             <div>
               <h4 className="text-lg font-medium mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                  <FaTwitter className="fab fa-twitter text-white"/>
-                </a>
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                  <FaInstagram className="fab fa-instagram text-white"/>
-                </a>
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                  <FaLinkedinIn className="fab fa-linkedin-in text-white"/>
-                </a>
+                <a href="https://x.com/theviragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+                    <FaXTwitter className=" text-white"/>
+                    </a>
+                    <a href="https://www.instagram.com/the_viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+                    <FaInstagram className=" text-white"/>
+                    </a>
+                    <a href="https://www.linkedin.com/company/viragovox/" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+                    <FaLinkedinIn className=" text-white"/>
+                    </a>
+                    <a href="https://tiktok.com/@the.viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
+                        <FaTiktok className=" text-white"/>
+                      </a>
               </div>
             </div>
           </div>
