@@ -682,18 +682,18 @@ const PartnershipPage = () => {
             <div>
               <h4 className="text-lg font-medium mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                <a href="https://x.com/theviragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                    <FaXTwitter className=" text-white"/>
-                    </a>
-                    <a href="https://www.instagram.com/the_viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                    <FaInstagram className=" text-white"/>
-                    </a>
-                    <a href="https://www.linkedin.com/company/viragovox/" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                    <FaLinkedinIn className=" text-white"/>
-                    </a>
-                    <a href="https://tiktok.com/@the.viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer">
-                        <FaTiktok className=" text-white"/>
-                      </a>
+                <Link href="https://www.x.com/theviragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                  <FaTwitter className="text-white"/>
+                </Link>
+                <Link href="https://www.instagram.com/the_viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram className="text-white"/>
+                </Link>
+                <Link href="https://www.linkedin.com/company/viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedinIn className="text-white"/>
+                </Link>
+                <Link href="https://www.tiktok.com/@the.viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                  <FaTiktok className="text-white"/>
+                </Link>
               </div>
             </div>
           </div>
