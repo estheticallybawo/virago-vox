@@ -82,7 +82,7 @@ const handleSubmit = async (e, signupType) => {
             //alert(`Error: ${errorMessage}`);
             Swal.fire({
            title: 'Error!',
-           text: `A network error occurred. ${errorMessage}`,
+           text: `${errorMessage}`,
            icon: 'error',
         })
         } else {
@@ -181,7 +181,7 @@ return (
     <div className="max-w-4xl mx-auto">
     <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Our Mission</h2>
     <p className="text-xl leading-relaxed mb-6 text-center">
-    ViragoVOX exists to correct centuries of historical erasure by archiving, celebrating, and co-creating stories of women—past and present.
+    ViragoVOX exists to correct centuries of historical erasure by archiving, celebrating, and co-creating stories of women, past and present.
     </p>
     <p className="text-xl leading-relaxed mb-6 text-center">
     We're building a living digital archive where the contributions of women throughout history are properly documented, celebrated, and made accessible to all.
@@ -524,14 +524,7 @@ return (
     className="mt-1"
     />
     </div>
-    <div>
-    <Label htmlFor="relationship" className="text-base font-medium">Your Relationship</Label>
-    <Input
-    id="relationship"
-    placeholder="e.g., Mother, Mentor, Teacher, Colleague"
-    className="mt-1"
-    />
-    </div>
+    
     <div>
     <Label htmlFor="story" className="text-base font-medium">Her Story</Label>
     <Textarea
