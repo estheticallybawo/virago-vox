@@ -202,7 +202,7 @@ const FeaturedProfile = () => {
               <div className="flex items-center mb-4">
                 <Badge className="bg-purple-100 text-purple-800 border-purple-200 mr-2">1914-2000</Badge>
                 <Badge className="bg-teal-100 text-teal-800 border-teal-200 mr-2">Inventor</Badge>
-                <Badge className="bg-amber-100 text-amber-800 border-amber-200">Actress</Badge>
+                <Badge className="bg-teal-100 text-teal-800 border-teal-200">Actress</Badge>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-4">
                 Hedy Lamarr
@@ -404,14 +404,14 @@ const FeaturedProfile = () => {
                 </TabsContent>
 
                 <TabsContent value="related" className="space-y-6">
-                  <Card className="p-6">
+                  <Card className="p-6 overflow-hidden">
                     <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6">Related Women</h2>
                     <p className="text-gray-700 mb-6">
                       Explore the profiles of other pioneering women who, like Hedy Lamarr, made significant contributions in their fields while overcoming societal barriers.
                     </p>
                     
-                    <Swiper
-                      modules={[Pagination, Autoplay]}
+                    <Swiper 
+                      modules={[Pagination, Autoplay, Navigation]}
                       spaceBetween={24}
                       slidesPerView={1}
                       breakpoints={{
@@ -557,28 +557,28 @@ const FeaturedProfile = () => {
                   <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">Awards & Recognition</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <i className="fa-solid fa-award text-amber-500 mt-1 mr-3"></i>
+                      <i className="fa-solid fa-award text-teal-500 mt-1 mr-3"></i>
                       <div>
                         <p className="text-gray-900 font-medium">Electronic Frontier Foundation Pioneer Award</p>
                         <p className="text-gray-600 text-sm">1997</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <i className="fa-solid fa-award text-amber-500 mt-1 mr-3"></i>
+                      <i className="fa-solid fa-award text-teal-500 mt-1 mr-3"></i>
                       <div>
                         <p className="text-gray-900 font-medium">BULBIE Gnass Spirit of Achievement Award</p>
                         <p className="text-gray-600 text-sm">1997</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <i className="fa-solid fa-award text-amber-500 mt-1 mr-3"></i>
+                      <i className="fa-solid fa-award text-teal-500 mt-1 mr-3"></i>
                       <div>
                         <p className="text-gray-900 font-medium">Viktor Kaplan Medal from the Austrian Association of Patent Holders</p>
                         <p className="text-gray-600 text-sm">1998</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <i className="fa-solid fa-award text-amber-500 mt-1 mr-3"></i>
+                      <i className="fa-solid fa-award text-teal-500 mt-1 mr-3"></i>
                       <div>
                         <p className="text-gray-900 font-medium">Inducted into the National Inventors Hall of Fame</p>
                         <p className="text-gray-600 text-sm">2014 (posthumously)</p>
@@ -752,7 +752,7 @@ const FeaturedProfile = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-amber-300 bg-clip-text text-transparent mb-4">
+              <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-teal-300 bg-clip-text text-transparent mb-4">
                 ViragoVOX
               </h3>
               <p className="text-gray-400 mb-4">

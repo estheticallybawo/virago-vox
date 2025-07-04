@@ -1,5 +1,5 @@
 //'use client';
-import Waitlist from "./waitlist/page";
+import Home from "./home/page";
 
 
 
@@ -7,7 +7,7 @@ import Waitlist from "./waitlist/page";
 export default function Page() {
   return (
     <>
-      <Waitlist />
+    <Home />
     </>
   );
 }

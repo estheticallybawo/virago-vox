@@ -106,7 +106,7 @@ return (
             <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center">
-            <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-amber-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-teal-500 bg-clip-text text-transparent">
             ViragoVOX
             </h1>
             </div>
@@ -510,7 +510,7 @@ return (
             </Card>
             ))}
             </div>
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-xl p-8">
+            <div className="bg-gradient-to-r from-purple-50 to-teal-50 rounded-xl p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
             <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">Become a Partner</h3>
@@ -531,7 +531,7 @@ return (
             <span className="text-gray-700">Access to our growing community of history enthusiasts</span>
             </li>
             </ul>
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white !rounded-button whitespace-nowrap cursor-pointer">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-white !rounded-button whitespace-nowrap cursor-pointer">
             Explore Partnership Options <i className="fa-solid fa-handshake ml-2"></i>
             </Button>
             </div>

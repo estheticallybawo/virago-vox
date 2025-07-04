@@ -313,7 +313,7 @@ const GalleryPage = () => {
           <div className="flex items-center space-x-2">
             <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">ViragoVOX</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent">ViragoVOX</span>
             </a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
@@ -628,7 +628,7 @@ const GalleryPage = () => {
                         <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200 border-none cursor-pointer">
                           {profile.category}
                         </Badge>
-                        <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-200 border-none cursor-pointer">
+                        <Badge className="bg-teal-100 text-teal-700 hover:bg-teal-200 border-none cursor-pointer">
                           {profile.era}
                         </Badge>
                         <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 border-none cursor-pointer">
@@ -783,7 +783,7 @@ const GalleryPage = () => {
             Help us expand our archive by contributing stories of women who have made significant impacts throughout history.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
               Submit a Profile
             </Button>
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 !rounded-button cursor-pointer whitespace-nowrap">
@@ -800,7 +800,7 @@ const GalleryPage = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-amber-300 bg-clip-text text-transparent">ViragoVOX</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-300 bg-clip-text text-transparent">ViragoVOX</span>
               </div>
               <p className="text-gray-400 mb-4">Rewriting history from a woman-centered lens, preserving legacies with the power, elegance, and clarity they deserve.</p>
               <div className="flex space-x-4">

@@ -90,7 +90,7 @@ const PartnershipPage = () => {
         <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-              Partnership <span className="text-amber-400">Opportunities</span>
+              Partnership <span className="text-teal-400">Opportunities</span>
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl">
               Join forces with ViragoVOX to help document, celebrate, and amplify women's contributions throughout history. Together, we can correct the historical record.
@@ -153,8 +153,8 @@ const PartnershipPage = () => {
             
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <div className="h-12 w-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
-                  <FaUser className="fas fa-users text-amber-600 text-xl"/>
+                <div className="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                  <FaUser className="fas fa-users text-teal-600 text-xl"/>
                 </div>
                 <h3 className="text-xl font-bold mb-3">Community Engagement</h3>
                 <p className="text-gray-700">
@@ -174,11 +174,11 @@ const PartnershipPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Bronze Tier */}
             <Card className="bg-white shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-amber-600"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-teal-600"></div>
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="h-16 w-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaAward className="fas fa-award text-amber-600 text-2xl"/>
+                  <div className="h-16 w-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaAward className="fas fa-award text-teal-600 text-2xl"/>
                   </div>
                   <h3 className="text-2xl font-bold">Bronze Partner</h3>
                   <div className="mt-4 mb-6">
@@ -208,7 +208,7 @@ const PartnershipPage = () => {
                 </ul>
                 
                 <Button
-                  className="w-full bg-amber-600 hover:bg-amber-700 text-white !rounded-button cursor-pointer whitespace-nowrap"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white !rounded-button cursor-pointer whitespace-nowrap"
                   onClick={() => document.getElementById('partnership-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Select Bronze Plan
@@ -374,8 +374,8 @@ const PartnershipPage = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="h-10 w-15 bg-amber-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <FaUser className="fas fa-users text-amber-600"/>
+                    <div className="h-10 w-15 bg-teal-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                      <FaUser className="fas fa-users text-teal-600"/>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Dedicated Support</h3>

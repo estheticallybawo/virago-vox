@@ -160,7 +160,7 @@ return (
     <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
     <div className="max-w-3xl mx-auto text-center">
     <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-    Preserving Her Stories, Powering <span className="text-amber-400">Her</span> Legacies
+    Preserving Her Stories, Powering <span className="text-teal-400">Her</span> Legacies
     </h1>
     <p className="text-l md:text-xl mb-10 text-white">
     The world's first AI-powered female impact archive, preserving and amplifying the voices of women who have shaped history but have too often been forgotten.
@@ -256,8 +256,8 @@ return (
     </Card>
     <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
     <CardContent className="p-6">
-    <div className="h-12 w-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
-    <FaPenFancy className="fas fa-pen-fancy text-amber-600 text-xl"/>
+    <div className="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+    <FaPenFancy className="fas fa-pen-fancy text-teal-600 text-xl"/>
     </div>
     <h3 className="text-xl font-bold mb-3">Contribute Stories</h3>
     <p className="text-gray-700">
