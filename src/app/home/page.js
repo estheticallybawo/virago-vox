@@ -361,7 +361,7 @@ import Link from 'next/link';
         ))}
         </div>
         <div className="text-center">
-        <a href="./gallery">
+        <a href="./archive">
         <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">
         Explore More Profiles
         </Button>
@@ -471,7 +471,8 @@ import Link from 'next/link';
         </Tabs>
         </div>
         </section>
-        {/* Podcast Section - Coming Soon */}
+        
+ {/* Podcast Section - Coming Soon */}
         <section id="podcast" className="py-20 bg-purple-900 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto">

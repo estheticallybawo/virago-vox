@@ -13,6 +13,8 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
+import { FaArrowLeft, FaArrowRight, FaChevronDown, FaCloudUploadAlt, FaInstagram, FaLinkedinIn, FaPaperPlane, FaSearch, FaShare, FaTiktok, FaTwitter, FaUser } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Archive = () => {
 const [searchQuery, setSearchQuery] = useState('');
@@ -31,7 +33,8 @@ const featuredWomen = [
             period: "1900-1978",
             impact: "Nigerian educator, political campaigner, women's rights activist and traditional aristocrat who was the first woman to drive a car in Nigeria.",
             category: ["Politics", "Activism", "Education"],
-            image: "https://readdy.ai/api/search-image?query=Portrait%20of%20an%20elegant%20Nigerian%20woman%20from%20the%201900s%20with%20traditional%20headwrap%2C%20dignified%20expression%2C%20historical%20photograph%20style%2C%20sepia%20toned%2C%20professional%20lighting%2C%20neutral%20background%2C%20detailed%20facial%20features%2C%20cultural%20significance&width=400&height=500&seq=1&orientation=portrait"
+            image: "./Funmilayo.jpg",
+            alt: "AI-image of Funmilayo Ransome-Kuti"
             },
             {
             id: 2,
@@ -39,7 +42,7 @@ const featuredWomen = [
             period: "1914-2000",
             impact: "Austrian-American actress and inventor who pioneered the technology that would form the basis for today's WiFi, GPS, and Bluetooth communication systems.",
             category: ["Science", "Technology", "Entertainment"],
-            image: "https://readdy.ai/api/search-image?query=Portrait%20of%20a%20glamorous%201940s%20Hollywood%20actress%20with%20dark%20hair%20and%20classic%20makeup%2C%20elegant%20pose%2C%20studio%20lighting%2C%20professional%20photograph%2C%20neutral%20background%2C%20vintage%20Hollywood%20glamour%2C%20sophisticated%20style%2C%20detailed%20facial%20features&width=400&height=500&seq=2&orientation=portrait"
+            image: "./Hedy.jpg",
             },
             {
             id: 3,
@@ -47,7 +50,7 @@ const featuredWomen = [
             period: "1920-1958",
             impact: "English chemist whose work was central to understanding the molecular structures of DNA, RNA, viruses, coal, and graphite.",
             category: ["Science", "Research"],
-            image: "https://readdy.ai/api/search-image?query=Portrait%20of%20a%20serious%20mid-century%20female%20scientist%20with%20short%20dark%20hair%20wearing%20lab%20coat%2C%20professional%20lighting%2C%20neutral%20background%2C%20historical%20photograph%20style%2C%20intellectual%20expression%2C%20detailed%20facial%20features%2C%20academic%20setting%2C%20scientific%20significance&width=400&height=500&seq=3&orientation=portrait"
+            image: "./Rosalind.jpg"
             },
             {
             id: 4,
@@ -55,7 +58,7 @@ const featuredWomen = [
             period: "1916-2000",
             impact: "Sri Lankan politician who became the world's first female prime minister in 1960.",
             category: ["Politics", "Leadership"],
-            image: "https://readdy.ai/api/search-image?query=Portrait%20of%20a%20dignified%20South%20Asian%20woman%20in%20traditional%20saree%20from%201960s%2C%20political%20leader%20pose%2C%20professional%20lighting%2C%20neutral%20background%2C%20historical%20photograph%20style%2C%20authoritative%20expression%2C%20detailed%20facial%20features%2C%20leadership%20significance&width=400&height=500&seq=4&orientation=portrait"
+            image: "./Sirimavo.jpg"
             },
             {
             id: 5,
@@ -63,7 +66,7 @@ const featuredWomen = [
             period: "1940-2011",
             impact: "Kenyan environmental political activist and the first African woman to win the Nobel Peace Prize.",
             category: ["Environment", "Activism"],
-            image: "https://readdy.ai/api/search-image?query=Portrait%20of%20a%20smiling%20African%20woman%20with%20colorful%20traditional%20headwrap%2C%20environmental%20activist%2C%20outdoor%20setting%2C%20natural%20lighting%2C%20neutral%20background%2C%20warm%20expression%2C%20detailed%20facial%20features%2C%20environmental%20significance%2C%20Nobel%20laureate&width=400&height=500&seq=5&orientation=portrait"
+            image: "./Wangari.jpg"
             },
             {
             id: 6,
@@ -71,7 +74,7 @@ const featuredWomen = [
             period: "1815-1852",
             impact: "English mathematician and writer, known for her work on Charles Babbage's Analytical Engine. She is often regarded as the first computer programmer.",
             category: ["Science", "Technology", "Mathematics"],
-            image: "https://readdy.ai/api/search-image?query=Portrait%20of%20a%20Victorian%20era%20woman%20with%20elaborate%20hairstyle%20and%20period%20dress%2C%20intellectual%20expression%2C%20professional%20lighting%2C%20neutral%20background%2C%20historical%20painting%20style%2C%20detailed%20facial%20features%2C%20mathematical%20significance%2C%20vintage%20aesthetic&width=400&height=500&seq=6&orientation=portrait"
+            image: "./Lovelace.jpg"
             }
             ];
             const partnerOrganizations = [
@@ -110,39 +113,24 @@ return (
             ViragoVOX
             </h1>
             </div>
-            <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Home</a>
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Archive</a>
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Submit</a>
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Spotlight</a>
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Partners</a>
+            <nav className="hidden md:flex items-center space-x-10">
+            <a href="./home" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Home</a>
+            <a href="./archive" className="text-purple-700 hover:text-purple-600 font-bold cursor-pointer">Archive</a>
+            <a href="#submit" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Submit</a>
+            <a href="./featured" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Featured</a>
+            <a href="./patnership" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Partnership</a>
             </nav>
-            <div className="flex items-center space-x-4">
-            <div className="relative">
-            <Input
-            type="text"
-            placeholder="Search stories..."
-            className="w-40 md:w-64 pl-10 pr-4 py-2 text-sm border-purple-300 focus:border-purple-500 rounded-full"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <i className="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-400 text-sm"></i>
-            </div>
-            <Button variant="ghost" size="icon" className="!rounded-button cursor-pointer">
-            <i className="fa-solid fa-user text-gray-700"></i>
-            </Button>
-            </div>
             </div>
             </header>
  {/* Hero Section */}
             <section className="relative overflow-hidden">
             <div className="absolute inset-0 z-0">
             <img
-            src="https://readdy.ai/api/search-image?query=Abstract%20collage%20of%20diverse%20women%20throughout%20history%2C%20soft%20purple%20and%20teal%20gradient%20background%2C%20elegant%20composition%2C%20multiple%20portraits%20blending%20together%2C%20professional%20lighting%2C%20artistic%20layout%2C%20high%20quality%20digital%20art%2C%20inspiring%20atmosphere%2C%20empowering%20imagery%2C%20historical%20significance&width=1440&height=600&seq=7&orientation=landscape"
+            src="./Viragos.jpg"
             alt="Women throughout history"
             className="w-full h-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-purple-800/70 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-700/90 via-purple-800/70 to-transparent"></div>
             </div>
             <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
             <div className="max-w-2xl text-white">
@@ -152,7 +140,7 @@ return (
             <p className="text-lg md:text-xl mb-8 text-white/90">
             The world's first AI-powered female impact archive, preserving and amplifying the voices of women who have shaped history but have too often been forgotten.
             </p>
-            <Button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
             Add Her Story <i className="fa-solid fa-arrow-right ml-2"></i>
             </Button>
             </div>
@@ -162,7 +150,7 @@ return (
             <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-10">
-            <h2 className="text-3xl font-serif font-bold text-gray-900">Weekly Spotlights</h2>
+            <h2 className="text-3xl font-serif font-bold text-gray-900">This Week's Features</h2>
             <p className="text-purple-600">{formatDate(currentDate)}</p>
             </div>
             <Swiper
@@ -202,7 +190,7 @@ return (
             </Badge>
             ))}
             </div>
-            <a href="https://readdy.ai/home/3273abdd-4158-4784-a714-0009314fb341/714649ad-3606-4402-94d9-31fc53fff5da" data-readdy="true">
+            <a href="./profile" >
             <Button variant="link" className="text-teal-600 hover:text-teal-700 p-0 justify-start !rounded-button whitespace-nowrap cursor-pointer">
             Read full story <i className="fa-solid fa-arrow-right ml-1"></i>
             </Button>
@@ -288,7 +276,7 @@ return (
             placeholder="Search by name, keyword, or impact..."
             className="w-full pl-12 pr-4 py-3 text-base border-purple-200 focus:border-purple-500"
             />
-            <i className="fa-solid fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-400"></i>
+            <FaSearch className="fa-solid fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-400"/>
             <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white !rounded-button whitespace-nowrap cursor-pointer">
             Search
             </Button>
@@ -321,7 +309,7 @@ return (
             </Badge>
             )}
             </div>
-            <a href="https://readdy.ai/home/3273abdd-4158-4784-a714-0009314fb341/cd26ef64-018d-4199-9890-85c4798c9d91" data-readdy="true">
+            <a href="./profile" >
             <Button variant="link" className="text-teal-600 hover:text-teal-700 p-0 h-auto text-sm !rounded-button whitespace-nowrap cursor-pointer">
             View profile
             </Button>
@@ -334,7 +322,7 @@ return (
             <div className="mt-10 text-center">
                 <a href="./gallery">
             <Button variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-50 !rounded-button whitespace-nowrap cursor-pointer">
-            Load More Stories <i className="fa-solid fa-chevron-down ml-2"></i>
+            Load More Stories <FaChevronDown className="fa-solid fa-chevron-down ml-2"/>
             </Button>
             </a>
             </div>
@@ -434,10 +422,10 @@ return (
             </div>
             <div className="flex justify-between">
             <Button variant="outline" className="border-gray-300 !rounded-button whitespace-nowrap cursor-pointer">
-            <i className="fa-solid fa-arrow-left mr-2"></i> Back to Basic Info
+            <FaArrowLeft className="fa-solid fa-arrow-left mr-2"/> Back to Basic Info
             </Button>
             <Button className="bg-teal-500 hover:bg-teal-600 text-white !rounded-button whitespace-nowrap cursor-pointer">
-            Next: References <i className="fa-solid fa-arrow-right ml-2"></i>
+            Next: References <FaArrowRight className="fa-solid fa-arrow-right ml-2"/>
             </Button>
             </div>
             </div>
@@ -454,13 +442,14 @@ return (
             <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Image Upload (optional)</label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-            <i className="fa-solid fa-cloud-arrow-up text-3xl text-gray-400 mb-2"></i>
+            <FaCloudUploadAlt className="fa-solid fa-cloud-arrow-up text-3xl text-gray-400 mb-2"/>
             <p className="text-sm text-gray-500 mb-2">Drag and drop an image here, or click to select a file</p>
             <p className="text-xs text-gray-400">Supported formats: JPG, PNG, TIFF (max 5MB)</p>
-            <input type="file" className="hidden" />
+            <input type="file"/>
             <Button variant="outline" className="mt-4 text-sm border-gray-300 !rounded-button whitespace-nowrap cursor-pointer">
             Select File
-            </Button>
+            </Button> 
+        
             </div>
             </div>
             <div>
@@ -478,10 +467,10 @@ return (
             </div>
             <div className="flex justify-between">
             <Button variant="outline" className="border-gray-300 !rounded-button whitespace-nowrap cursor-pointer">
-            <i className="fa-solid fa-arrow-left mr-2"></i> Back to Impact
+            <FaArrowLeft className="fa-solid fa-arrow-left mr-2"/> Back to Impact
             </Button>
             <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button whitespace-nowrap cursor-pointer">
-            Submit Story <i className="fa-solid fa-paper-plane ml-2"></i>
+            Submit Story <FaPaperPlane className="fa-solid fa-paper-plane ml-2"/>
             </Button>
             </div>
             </div>
@@ -490,25 +479,23 @@ return (
             </div>
             </div>
             </section>
-    {/* Partnership Section */}
-            <section className="py-16 bg-white">
+{/* Partnership Section */}
+<section className="py-16 bg-white">
             <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-3">Our Partners</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-            Join these forward-thinking organizations in supporting our mission to preserve and amplify women's voices throughout history.
+            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-3">Support Us</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto m-8">
+            Join forward-thinking organizations in supporting our mission to preserve and amplify women's voices throughout history.
             </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {partnerOrganizations.map((partner) => (
-            <Card key={partner.id} className="p-6 text-center hover:shadow-md transition-shadow duration-300">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i className={`${partner.logo} text-purple-600 text-2xl`}></i>
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">{partner.name}</h3>
-            <p className="text-gray-600 text-sm">{partner.description}</p>
-            </Card>
-            ))}
+                <Link href="./partnership" className="inline-block mb-6">
+                <Button
+                variant="outline"
+                size="lg"
+                className="bg-transparent border-2 border-amber-500 text-amber-400 hover:bg-amber-700 hover:text-white text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap"
+                >
+                Buy us Coffee
+                </Button>
+                </Link>
             </div>
             <div className="bg-gradient-to-r from-purple-50 to-teal-50 rounded-xl p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -584,33 +571,33 @@ return (
             <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-            <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-teal-300 bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-purple-400 via-teal-300 to-teal-300 bg-clip-text text-transparent mb-4">
             ViragoVOX
             </h3>
             <p className="text-gray-400 mb-4">
             A digital sanctuary preserving and amplifying the voices of women throughout history.
             </p>
-            <div className="flex space-x-4">
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                    <i className="fa-brands fa-twitter text-lg"></i>
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                    <i className="fa-brands fa-instagram text-lg"></i>
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                    <i className="fa-brands fa-facebook text-lg"></i>
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                    <i className="fa-brands fa-linkedin text-lg"></i>
-                    </a>
-            </div>
+           <div className="flex space-x-4">
+        <Link href="https://x.com/theviragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                          <FaTwitter className="text-white"/>
+                        </Link>
+                        <Link href="https://www.instagram.com/the_viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                          <FaInstagram className="text-white"/>
+                        </Link>
+                        <Link href="https://www.linkedin.com/company/viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                          <FaLinkedinIn className="text-white"/>
+                        </Link>
+                        <Link href="https://tiktok.com/@the.viragovox" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
+                          <FaTiktok className="text-white"/>
+                        </Link>
+        </div>
             </div>
             <div>
             <h4 className="text-lg font-medium mb-4">Explore</h4>
             <ul className="space-y-2">
                     <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Archive</a></li>
                     <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Submit a Story</a></li>
-                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Weekly Spotlights</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Weekly Features</a></li>
                     <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Partnership Opportunities</a></li>
                     <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">About Our AI</a></li>
             </ul>
@@ -652,11 +639,6 @@ return (
                     <a href="#" className="hover:text-white transition-colors cursor-pointer">Accessibility</a>
                     <a href="#" className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
             </div>
-            <div className="flex items-center mt-4 md:mt-0">
-                <span className="text-gray-500 text-sm mr-2">Powered by:</span>
-                    <i className="fa-solid fa-robot text-purple-400 mr-1"></i>
-                <span className="text-gray-400 text-sm">AI Technology</span>
-      </div>
      </div>
     </div>
             </footer>
