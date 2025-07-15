@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import * as echarts from 'echarts';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const ProfilePage = () => {
   const [isBookmarked, setIsBookmarked] = useState(false);
@@ -117,21 +118,21 @@ const ProfilePage = () => {
       name: "Marie Curie",
       period: "1867-1934",
       connection: "Fellow female scientist who broke barriers in male-dominated fields",
-      image: "https://readdy.ai/api/search-image?query=Portrait%2520of%2520Marie%2520Curie%2520in%2520her%2520laboratory%252C%2520early%25201900s%252C%2520serious%2520expression%252C%2520wearing%2520dark%2520clothing%252C%2520historical%2520photograph%2520style%252C%2520neutral%2520background%252C%2520scientific%2520setting%2520with%2520laboratory%2520equipment%252C%2520professional%2520lighting%252C%2520detailed%2520facial%2520features&width=400&height=500&seq=10&orientation=portrait"
+      image: "./Marie.jpg"
     },
     {
       id: 2,
       name: "Grace Hopper",
       period: "1906-1992",
       connection: "Pioneer in computer programming who developed early compiler technology",
-      image: "https://readdy.ai/api/search-image?query=Portrait%2520of%2520Grace%2520Hopper%2520in%2520naval%2520uniform%252C%2520mid-century%2520photograph%252C%2520professional%2520lighting%252C%2520neutral%2520background%252C%2520confident%2520expression%252C%2520detailed%2520facial%2520features%252C%2520military%2520setting%252C%2520computer%2520science%2520pioneer%252C%2520historical%2520significance&width=400&height=500&seq=11&orientation=portrait"
+      image: "./GraceHopper.jpg"
     },
     {
       id: 3,
       name: "Ada Lovelace",
       period: "1815-1852",
       connection: "First computer programmer who envisioned computing beyond calculations",
-      image: "https://readdy.ai/api/search-image?query=Portrait%2520of%2520Ada%2520Lovelace%2520in%2520Victorian%2520era%2520dress%2520with%2520elaborate%2520hairstyle%252C%2520historical%2520painting%2520style%252C%2520neutral%2520background%252C%2520thoughtful%2520expression%252C%2520detailed%2520facial%2520features%252C%2520mathematical%2520genius%252C%2520computing%2520pioneer%252C%2520aristocratic%2520appearance&width=400&height=500&seq=12&orientation=portrait"
+      image: "./AdaLovelace.jpg"
     }
   ];
 
@@ -141,9 +142,9 @@ const ProfilePage = () => {
       <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <a href="https://readdy.ai/home/3273abdd-4158-4784-a714-0009314fb341/6b0b0170-2a53-4b20-b4f2-b4548402b0ef" data-readdy="true" className="flex items-center cursor-pointer">
-              <i className="fa-solid fa-arrow-left mr-3 text-purple-600"></i>
-              <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-amber-500 bg-clip-text text-transparent">
+            <a href="./home" className="flex items-center cursor-pointer">
+              <FaArrowLeft className="fa-solid fa-arrow-left mr-3 text-purple-600"/>
+              <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-teal-500 bg-clip-text text-transparent">
                 ViragoVOX
               </h1>
             </a>
@@ -181,7 +182,7 @@ const ProfilePage = () => {
             <div className="relative">
               <input 
                 type="text" 
-                value="https://viragavox.org/profile/hedy-lamarr" 
+                value="https://theviragavox.com/profile/hedy-lamarr" 
                 className="w-full pr-10 pl-3 py-2 text-sm border rounded-md border-gray-300"
                 readOnly
               />

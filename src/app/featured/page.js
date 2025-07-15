@@ -13,13 +13,14 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import * as echarts from 'echarts';
+import { FaChevronRight, FaSearch, FaUser } from 'react-icons/fa';
 
 const FeaturedProfile = () => {
   const [activeTab, setActiveTab] = useState("biography");
   const [showCitationOptions, setShowCitationOptions] = useState(false);
   
   React.useEffect(() => {
-    // Initialize impact chart
+  
     const chartDom = document.getElementById('impact-chart');
     if (chartDom) {
       const myChart = echarts.init(chartDom);
@@ -80,21 +81,21 @@ const FeaturedProfile = () => {
       name: "Funmilayo Ransome-Kuti",
       period: "1900-1978",
       field: "Activism",
-      image: "https://readdy.ai/api/search-image?query=Portrait%2520of%2520an%2520elegant%2520Nigerian%2520woman%2520from%2520the%25201900s%2520with%2520traditional%2520headwrap%252C%2520dignified%2520expression%252C%2520historical%2520photograph%2520style%252C%2520sepia%2520toned%252C%2520professional%2520lighting%252C%2520neutral%2520background%252C%2520detailed%2520facial%2520features%252C%2520cultural%2520significance&width=100&height=100&seq=1&orientation=squarish"
+      image: "./Funmilayo.jpg"
     },
     {
       id: 2,
       name: "Sirimavo Bandaranaike",
       period: "1916-2000",
       field: "Politics",
-      image: "https://readdy.ai/api/search-image?query=Portrait%2520of%2520a%2520dignified%2520South%2520Asian%2520woman%2520in%2520traditional%2520saree%2520from%25201960s%252C%2520political%2520leader%2520pose%252C%2520professional%2520lighting%252C%2520neutral%2520background%252C%2520historical%2520photograph%2520style%252C%2520authoritative%2520expression%252C%2520detailed%2520facial%2520features%252C%2520leadership%2520significance&width=100&height=100&seq=4&orientation=squarish"
+      image: "./Sirimavo.jpg"
     },
     {
       id: 3,
       name: "Wangari Maathai",
       period: "1940-2011",
       field: "Environment",
-      image: "https://readdy.ai/api/search-image?query=Portrait%2520of%2520a%2520smiling%2520African%2520woman%2520with%2520colorful%2520traditional%2520headwrap%252C%2520environmental%2520activist%252C%2520outdoor%2520setting%252C%2520natural%2520lighting%252C%2520neutral%2520background%252C%2520warm%2520expression%252C%2520detailed%2520facial%2520features%252C%2520environmental%2520significance%252C%2520Nobel%2520laureate&width=100&height=100&seq=5&orientation=squarish"
+      image: "./Wangari.jpg"
     }
   ];
   
@@ -102,32 +103,32 @@ const FeaturedProfile = () => {
     {
       id: 1,
       caption: "Hedy Lamarr in her laboratory, 1940",
-      image: "https://readdy.ai/api/search-image?query=Vintage%2520photograph%2520of%2520a%2520glamorous%2520woman%2520in%25201940s%2520attire%2520working%2520in%2520a%2520scientific%2520laboratory%2520with%2520electronic%2520equipment%252C%2520black%2520and%2520white%2520photography%252C%2520historical%2520significance%252C%2520professional%2520lighting%252C%2520detailed%2520composition%252C%2520authentic%2520period%2520setting%252C%2520scientific%2520instruments%2520visible&width=300&height=200&seq=10&orientation=landscape"
+      image: "./Hedy_Lamarr.jpg"
     },
     {
       id: 2,
       caption: "Patent drawing for frequency hopping technology, 1942",
-      image: "https://readdy.ai/api/search-image?query=Historical%2520patent%2520drawing%2520sketch%2520of%2520electronic%2520frequency%2520hopping%2520technology%2520from%25201940s%252C%2520technical%2520illustration%2520with%2520diagrams%2520and%2520notations%252C%2520vintage%2520document%2520style%252C%2520sepia%2520toned%2520paper%252C%2520detailed%2520engineering%2520drawings%252C%2520historical%2520significance&width=300&height=200&seq=11&orientation=landscape"
+      image: "./Patent_Drawing.jpg"
     },
     {
       id: 3,
       caption: "Hedy Lamarr receiving the Electronic Frontier Foundation Pioneer Award, 1997",
-      image: "https://readdy.ai/api/search-image?query=Elderly%2520elegant%2520woman%2520receiving%2520an%2520award%2520at%2520formal%2520ceremony%2520in%2520late%25201990s%252C%2520professional%2520event%2520photography%252C%2520award%2520presentation%2520moment%252C%2520dignified%2520pose%252C%2520formal%2520attire%252C%2520neutral%2520background%252C%2520historical%2520significance%252C%2520recognition%2520ceremony&width=300&height=200&seq=12&orientation=landscape"
+      image: "./Hedy_Recipient.jpg"
     },
     {
       id: 4,
       caption: "Hollywood promotional portrait, 1938",
-      image: "https://readdy.ai/api/search-image?query=Glamorous%2520black%2520and%2520white%2520Hollywood%2520portrait%2520photograph%2520from%25201930s%2520of%2520beautiful%2520woman%2520with%2520classic%2520makeup%2520and%2520styled%2520hair%252C%2520professional%2520studio%2520lighting%252C%2520elegant%2520pose%252C%2520vintage%2520film%2520star%2520quality%252C%2520dramatic%2520shadows%252C%2520historical%2520significance&width=300&height=200&seq=13&orientation=landscape"
+      image: "./Hedy_in_Hollywood.jpg"
     },
     {
       id: 5,
       caption: "With co-inventor George Antheil, 1941",
-      image: "https://readdy.ai/api/search-image?query=Vintage%2520photograph%2520of%2520elegant%2520woman%2520and%2520distinguished%2520man%2520in%25201940s%2520formal%2520attire%2520examining%2520technical%2520documents%2520or%2520blueprints%252C%2520black%2520and%2520white%2520photography%252C%2520professional%2520lighting%252C%2520collaborative%2520pose%252C%2520historical%2520significance%252C%2520period%2520setting&width=300&height=200&seq=14&orientation=landscape"
+      image: "./Hedy_with_George.jpg"
     },
     {
       id: 6,
       caption: "U.S. Navy implementation of frequency hopping technology, 1962",
-      image: "https://readdy.ai/api/search-image?query=1960s%2520military%2520naval%2520communication%2520equipment%2520with%2520electronic%2520components%2520and%2520control%2520panels%252C%2520vintage%2520technology%2520photograph%252C%2520historical%2520military%2520hardware%252C%2520professional%2520documentation%2520style%252C%2520technical%2520setting%252C%2520historical%2520significance&width=300&height=200&seq=15&orientation=landscape"
+      image: "./Hedy_Navy.jpg"
     }
   ];
   
@@ -155,20 +156,19 @@ const FeaturedProfile = () => {
                ViragoVOX
             </h1>
           </div>
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className=" md:flex items-end space-x-10">
             <a href="./home" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Home</a>
             <a href="./archive"className="text-purple-600 hover:text-purple-700 font-medium cursor-pointer">Archive</a>
             <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Submit</a>
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Spotlight</a>
-            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Partners</a>
+            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Feature</a>
+            <a href="#" className="text-gray-800 hover:text-purple-600 font-medium cursor-pointer">Contact Us</a>
           </nav>
           <div className="flex items-center space-x-4">
+            
             <Button variant="ghost" size="icon" className="!rounded-button cursor-pointer">
-              <i className="fa-solid fa-search text-gray-700"></i>
+              <FaSearch className="fa-solid fa-search text-gray-700"/>
             </Button>
-            <Button variant="ghost" size="icon" className="!rounded-button cursor-pointer">
-              <i className="fa-solid fa-user text-gray-700"></i>
-            </Button>
+        
           </div>
         </div>
       </header>
@@ -177,10 +177,10 @@ const FeaturedProfile = () => {
       <div className="bg-gray-50 border-b border-gray-100">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center text-sm text-gray-600">
-            <a href="#" className="hover:text-purple-600 cursor-pointer">Home</a>
-            <i className="fa-solid fa-chevron-right text-gray-400 mx-2 text-xs"></i>
+            <a href="./home" className="hover:text-purple-600 cursor-pointer">Home</a>
+            <FaChevronRight className="fa-solid fa-chevron-right text-gray-400 mx-2 text-xs"/>
             <a href="./archive" data-readdy="true" className="hover:text-purple-600 cursor-pointer">Archive</a>
-            <i className="fa-solid fa-chevron-right text-gray-400 mx-2 text-xs"></i>
+            <FaChevronRight className="fa-solid fa-chevron-right text-gray-400 mx-2 text-xs"/>
             <span className="text-purple-600 font-medium">Hedy Lamarr</span>
           </div>
         </div>

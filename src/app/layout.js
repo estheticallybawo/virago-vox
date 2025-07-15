@@ -4,7 +4,7 @@ import React from "react";
 
 
 export const metadata = {
-  title: "ViragoVOX",
+  title: "The Virago Vox",
   description: "The Female Impact Archive",
 };
 
