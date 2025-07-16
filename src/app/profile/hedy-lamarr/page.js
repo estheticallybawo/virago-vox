@@ -38,18 +38,21 @@ const HedyLamarrProfile = () => {
     era: "20th Century",
     region: "Europe / United States",
     field: "Inventor & Actress",
-    mainImage: "./HedyLamarr.jpg",
+    mainImage: "./Hedy_Lamarr.jpg",
     heroImage: "./Viragos.jpg",
     shortBio:
       "Austrian-American actress and inventor, celebrated for her beauty on screen and her pioneering work in wireless communications technology.",
     fullBio:
       "Hedy Lamarr was an Austrian-born American film actress and inventor. While she gained fame as a glamorous Hollywood star during the Golden Age of cinema, Lamarr also co-invented a frequency-hopping spread spectrum technology, which became a foundation for modern wireless communication such as Wi-Fi, Bluetooth, and GPS. Despite her scientific achievements being largely unrecognized during her lifetime, Lamarr's legacy as both an artist and innovator continues to inspire.",
     keyStats: [
-      { label: "Patents", value: "1 (US Patent 2,292,387)" },
-      { label: "Hollywood Films", value: "30+" },
-      { label: "Years Active", value: "1930–1958" },
-      { label: "Inventions", value: "Frequency Hopping" },
-      { label: "Awards", value: "Invention Hall of Fame" }
+     
+  { label: "Patents Filed", value: "1" },
+  { label: "Invention Impact", value: "Wi-Fi & GPS Roots" },
+  { label: "Films Starred In", value: "30+" },
+  { label: "Years Active in Film", value: "28" },
+  { label: "Legacy", value: "Tech & Film Icon" }
+
+
     ],
 
     timeline: [
