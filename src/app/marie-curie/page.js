@@ -1,20 +1,17 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
-
+"use client"
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { FaChevronDown } from 'react-icons/fa';
 
-const AdaLovelace = () => {
+const Marie = () => {
   const [selectedImage, setSelectedImage] = useState();
-  const [expandedSections, setExpandedSections] = useState<{ }>({
+  const [expandedSections, setExpandedSections] = useState({
     biography: false,
     earlyLife: false,
     career: false,
@@ -25,7 +22,7 @@ const AdaLovelace = () => {
   const [currentQuote, setCurrentQuote] = useState(0);
   const [isBookmarked, setIsBookmarked] = useState(false);
 
-  const toggleSection = () => {
+  const toggleSection = (section) => {
     setExpandedSections(prev => ({
       ...prev,
       [section]: !prev[section]
@@ -265,7 +262,7 @@ const AdaLovelace = () => {
                   <Collapsible open={expandedSections.biography} onOpenChange={() => toggleSection('biography')}>
                     <CollapsibleTrigger className="flex items-center justify-between w-full cursor-pointer">
                       <CardTitle className="text-2xl">Biography</CardTitle>
-                      <i className={`fas fa-chevron-${expandedSections.biography ? 'up' : 'down'} text-purple-600`}></i>
+                      <FaChevronDown className={`fas fa-chevron-${expandedSections.biography ? 'up' : 'down'} text-purple-600`}/>
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <CardContent className="pt-6">
@@ -641,4 +638,4 @@ const AdaLovelace = () => {
   );
 };
 
-export default AdaLovelace;
+export default Marie;

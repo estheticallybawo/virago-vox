@@ -1,4 +1,4 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
+
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
+import Link from 'next/link';
 
 const GalleryPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -101,7 +102,8 @@ const GalleryPage = () => {
       region: "Europe",
       years: "1867-1934",
       description: "Physicist and chemist who conducted pioneering research on radioactivity, becoming the first woman to win a Nobel Prize and the only person to win Nobel Prizes in multiple scientific fields.",
-      image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Marie%2520Curie%2520in%2520her%2520laboratory%252C%2520wearing%2520period-appropriate%2520clothing%2520from%2520early%25201900s%252C%2520surrounded%2520by%2520scientific%2520equipment%252C%2520with%2520a%2520serious%2520expression%2520conveying%2520her%2520dedication%2520to%2520science%252C%2520neutral%2520background%2520with%2520subtle%2520laboratory%2520elements%252C%2520photorealistic%2520style&width=400&height=500&seq=marie-curie-1&orientation=portrait"
+      image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Marie%2520Curie%2520in%2520her%2520laboratory%252C%2520wearing%2520period-appropriate%2520clothing%2520from%2520early%25201900s%252C%2520surrounded%2520by%2520scientific%2520equipment%252C%2520with%2520a%2520serious%2520expression%2520conveying%2520her%2520dedication%2520to%2520science%252C%2520neutral%2520background%2520with%2520subtle%2520laboratory%2520elements%252C%2520photorealistic%2520style&width=400&height=500&seq=marie-curie-1&orientation=portrait",
+      URL: "./marie-curie"
     },
     {
       id: 2,
@@ -131,8 +133,10 @@ const GalleryPage = () => {
       region: "Europe",
       years: "1815-1852",
       description: "English mathematician and writer, known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognize that the machine had applications beyond pure calculation.",
-      image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Ada%2520Lovelace%2520in%2520Victorian%2520era%2520dress%252C%2520sitting%2520at%2520a%2520desk%2520with%2520mathematical%2520papers%2520and%2520early%2520computing%2520concepts%252C%2520elegant%2520pose%2520with%2520thoughtful%2520expression%252C%2520soft%2520lighting%2520highlighting%2520her%2520intelligence%2520and%2520determination%252C%2520neutral%2520background%2520with%2520period%2520appropriate%2520elements&width=400&height=500&seq=ada-lovelace-1&orientation=portrait"
+      image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Ada%2520Lovelace%2520in%2520Victorian%2520era%2520dress%252C%2520sitting%2520at%2520a%2520desk%2520with%2520mathematical%2520papers%2520and%2520early%2520computing%2520concepts%252C%2520elegant%2520pose%2520with%2520thoughtful%2520expression%252C%2520soft%2520lighting%2520highlighting%2520her%2520intelligence%2520and%2520determination%252C%2520neutral%2520background%2520with%2520period%2520appropriate%2520elements&width=400&height=500&seq=ada-lovelace-1&orientation=portrait",
+      URL: "./ada-lovelace"
     },
+
     {
       id: 5,
       name: "Rosalind Franklin",
@@ -211,7 +215,8 @@ const GalleryPage = () => {
       region: "Europe",
       years: "1914-2000",
       description: "Austrian-American actress, inventor, and film producer. At the beginning of World War II, she and composer George Antheil developed a radio guidance system using frequency-hopping spread spectrum technology, which later became the basis for Wi-Fi, Bluetooth, and GPS.",
-      image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Hedy%2520Lamarr%2520in%2520elegant%25201940s%2520attire%252C%2520glamorous%2520Hollywood%2520style%2520combined%2520with%2520an%2520intelligent%2520expression%2520conveying%2520her%2520dual%2520identity%2520as%2520actress%2520and%2520inventor%252C%2520classic%2520studio%2520lighting%2520highlighting%2520her%2520striking%2520features%252C%2520neutral%2520background%2520with%2520subtle%2520technical%2520drawings%2520visible%252C%2520photorealistic%2520style&width=400&height=500&seq=hedy-lamarr-1&orientation=portrait"
+      image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Hedy%2520Lamarr%2520in%2520elegant%25201940s%2520attire%252C%2520glamorous%2520Hollywood%2520style%2520combined%2520with%2520an%2520intelligent%2520expression%2520conveying%2520her%2520dual%2520identity%2520as%2520actress%2520and%2520inventor%252C%2520classic%2520studio%2520lighting%2520highlighting%2520her%2520striking%2520features%252C%2520neutral%2520background%2520with%2520subtle%2520technical%2520drawings%2520visible%252C%2520photorealistic%2520style&width=400&height=500&seq=hedy-lamarr-1&orientation=portrait",
+      URL: "./hedy-lamarr"
     },
   ];
 
@@ -638,12 +643,16 @@ const GalleryPage = () => {
                       <p className="line-clamp-2 text-gray-600">{profile.description}</p>
                     </CardContent>
                     <CardFooter>
+                                          
                       <Button 
                         variant="outline" 
                         className="w-full border-purple-200 text-purple-700 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap"
                       >
+                        <Link href={`${profile.URL}`} className="flex items-center justify-center w-full">
                         Read Full Profile
+                         </Link>
                       </Button>
+                     
                     </CardFooter>
                   </Card>
                 ))}

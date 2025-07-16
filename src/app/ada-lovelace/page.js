@@ -1,20 +1,16 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
-
+"use client"
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
-const Marie = () => {
+const AdaLovelace = () => {
   const [selectedImage, setSelectedImage] = useState();
-  const [expandedSections, setExpandedSections] = useState<{ }>({
+  const [expandedSections, setExpandedSections] = useState({
     biography: false,
     earlyLife: false,
     career: false,
@@ -25,86 +21,84 @@ const Marie = () => {
   const [currentQuote, setCurrentQuote] = useState(0);
   const [isBookmarked, setIsBookmarked] = useState(false);
 
-  const toggleSection = () => {
+  const toggleSection = (section) => {
     setExpandedSections(prev => ({
       ...prev,
       [section]: !prev[section]
     }));
   };
-
-  // Profile data for Marie Curie
+  // Profile data for Ada Lovelace
   const profile = {
-    id: 1,
-    name: "Marie Curie",
-    fullName: "Marie Salomea Skłodowska Curie",
-    years: "1867-1934",
-    category: "Science",
-    era: "Modern Era",
+    id: 2,
+    name: "Ada Lovelace",
+    fullName: "Augusta Ada King, Countess of Lovelace",
+    years: "1815-1852",
+    category: "Mathematics",
+    era: "Victorian Era",
     region: "Europe",
-    field: "Physics & Chemistry",
-    mainImage: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Marie%20Curie%20in%20her%20laboratory%20wearing%20period-appropriate%20clothing%20from%20early%201900s%20surrounded%20by%20scientific%20equipment%20with%20a%20serious%20expression%20conveying%20her%20dedication%20to%20science%20neutral%20background%20with%20subtle%20laboratory%20elements%20photorealistic%20style&width=800&height=600&seq=marie-curie-hero&orientation=landscape",
-    heroImage: "https://readdy.ai/api/search-image?query=A%20beautiful%20vintage%20scientific%20laboratory%20from%20early%201900s%20with%20elegant%20equipment%20and%20instruments%20warm%20golden%20lighting%20creating%20an%20inspiring%20atmosphere%20for%20scientific%20discovery%20with%20subtle%20purple%20and%20amber%20color%20tones%20photorealistic%20style&width=1440&height=600&seq=marie-curie-lab-bg&orientation=landscape",
-    shortBio: "Physicist and chemist who conducted pioneering research on radioactivity, becoming the first woman to win a Nobel Prize and the only person to win Nobel Prizes in multiple scientific fields.",
-    fullBio: "Marie Curie was a Polish-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and the only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two different scientific fields. Her achievements included the discovery of the elements polonium and radium, isolation of radium and the study of the nature and compounds of this remarkable element. She founded the Curie Institutes in Paris and Warsaw, which remain major cancer research centers today. During World War I, she developed mobile radiography units to provide X-ray services to field hospitals.",
+    field: "Mathematics & Computing",
+    mainImage: "./AdaLovelace.jpg",
+    heroImage: "./Viragos.jpg",
+    shortBio: "English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She is often regarded as the first computer programmer.",
+    fullBio: "Ada Lovelace was an English mathematician and writer, chiefly known for her work on Charles Babbage's Analytical Engine. Her notes on the engine include what is recognized as the first algorithm intended to be carried out by a machine, making her the world's first computer programmer. Lovelace was the only legitimate child of the poet Lord Byron and Annabella Milbanke. Her vision of a future where machines could manipulate symbols and create music or art was far ahead of her time. Despite living in an era when women had limited access to scientific education, Ada's intellect and imagination left a lasting legacy in the history of computing.",
     keyStats: [
-      { label: "Nobel Prizes", value: "2" },
-      { label: "Elements Discovered", value: "2" },
-      { label: "Years of Research", value: "40+" },
-      { label: "Scientific Papers", value: "100+" }
+      { label: "First Algorithm", value: "1" },
+      { label: "Published Papers", value: "1" },
+      { label: "Mathematical Notes", value: "65+" },
+      { label: "Years Ahead of Her Time", value: "100+" },
+      { label: "Computational Concepts", value: "Pioneer" }
     ],
+
     timeline: [
-      { year: "1867", event: "Born in Warsaw, Poland", type: "birth" },
-      { year: "1891", event: "Moved to Paris to study at the Sorbonne", type: "education" },
-      { year: "1895", event: "Married Pierre Curie", type: "personal" },
-      { year: "1898", event: "Discovered polonium and radium", type: "achievement" },
-      { year: "1903", event: "Won Nobel Prize in Physics", type: "award" },
-      { year: "1906", event: "Pierre Curie died in accident", type: "personal" },
-      { year: "1911", event: "Won Nobel Prize in Chemistry", type: "award" },
-      { year: "1914-1918", event: "Developed mobile X-ray units for WWI", type: "service" },
-      { year: "1934", event: "Died from aplastic anemia", type: "death" }
+      { year: "1815", event: "Born in London, England", type: "birth" },
+      { year: "1833", event: "Met Charles Babbage", type: "education" },
+      { year: "1835", event: "Married William King-Noel, later Earl of Lovelace", type: "personal" },
+      { year: "1842-1843", event: "Translated and annotated Menabrea's article on the Analytical Engine", type: "achievement" },
+      { year: "1843", event: "Published the first algorithm for the Analytical Engine", type: "achievement" },
+      { year: "1852", event: "Died from uterine cancer", type: "death" }
     ],
     quotes: [
-      "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
-      "I was taught that the way of progress was neither swift nor easy.",
-      "Be less curious about people and more curious about ideas.",
-      "I am among those who think that science has great beauty."
+      "That brain of mine is something more than merely mortal; as time will show.",
+      "The Analytical Engine weaves algebraic patterns, just as the Jacquard loom weaves flowers and leaves.",
+      "I am more than ever now the bride of science.",
+      "Imagination is the discovering faculty, pre-eminently. It is that which penetrates into the unseen worlds around us."
     ],
     gallery: [
       {
-        url: "https://readdy.ai/api/search-image?query=Marie%20Curie%20working%20in%20her%20laboratory%20with%20scientific%20equipment%20and%20radioactive%20materials%20early%201900s%20period%20photograph%20style%20sepia%20tones&width=400&height=300&seq=marie-lab-1&orientation=landscape",
-        caption: "Marie Curie in her laboratory, 1902",
-        date: "1902"
+        url: "",
+        caption: "Ada Lovelace studying mathematics",
+        date: "c. 1835"
       },
       {
-        url: "https://readdy.ai/api/search-image?query=Marie%20Curie%20with%20Pierre%20Curie%20in%20their%20laboratory%20working%20together%20on%20radioactivity%20research%20vintage%20photograph%20style&width=400&height=300&seq=marie-pierre-1&orientation=landscape",
-        caption: "Marie and Pierre Curie in their laboratory",
-        date: "1900"
+        url: "",
+        caption: "Ada Lovelace and Charles Babbage",
+        date: "c. 1843"
       },
       {
-        url: "https://readdy.ai/api/search-image?query=Marie%20Curie%20receiving%20Nobel%20Prize%20ceremony%20formal%20academic%20setting%20early%201900s%20historical%20photograph%20style&width=400&height=300&seq=marie-nobel-1&orientation=landscape",
-        caption: "Nobel Prize ceremony, 1903",
-        date: "1903"
+        url: "",
+        caption: "Analytical Engine blueprints",
+        date: "1843"
       },
       {
-        url: "https://readdy.ai/api/search-image?query=Marie%20Curie%20teaching%20at%20university%20lecture%20hall%20with%20students%20early%201900s%20academic%20setting%20vintage%20photograph&width=400&height=300&seq=marie-teaching-1&orientation=landscape",
-        caption: "Teaching at the Sorbonne",
-        date: "1906"
+        url: "./Lovelace.jpg",
+        caption: "Portrait of Ada Lovelace",
+        date: "c. 1840"
       },
       {
-        url: "https://readdy.ai/api/search-image?query=Marie%20Curie%20mobile%20X-ray%20unit%20World%20War%20One%20medical%20service%20historical%20photograph%20wartime%20setting&width=400&height=300&seq=marie-xray-1&orientation=landscape",
-        caption: "Mobile X-ray unit during WWI",
-        date: "1917"
+        url: "",
+        caption: "Ada Lovelace in London",
+        date: "c. 1850"
       },
       {
-        url: "https://readdy.ai/api/search-image?query=Curie%20Institute%20building%20Paris%20historical%20architecture%20early%201900s%20scientific%20institution%20vintage%20photograph&width=400&height=300&seq=curie-institute-1&orientation=landscape",
-        caption: "The Curie Institute, Paris",
-        date: "1920"
+        url: "",
+        caption: "Ada Lovelace at a scientific salon",
+        date: "c. 1845"
       }
     ],
     relatedProfiles: [
-      { name: "Rosalind Franklin", category: "Science", image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20Rosalind%20Franklin%20in%20laboratory%20coat%20working%20with%20X-ray%20crystallography%20equipment&width=200&height=250&seq=rosalind-related&orientation=portrait" },
-      { name: "Lise Meitner", category: "Science", image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20Lise%20Meitner%20Austrian%20physicist%20nuclear%20research%20early%201900s%20scientific%20setting&width=200&height=250&seq=lise-related&orientation=portrait" },
-      { name: "Dorothy Hodgkin", category: "Science", image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20Dorothy%20Hodgkin%20British%20chemist%20X-ray%20crystallography%20Nobel%20Prize%20winner&width=200&height=250&seq=dorothy-related&orientation=portrait" }
+      { name: "Hedy Lamarr", category: "Mathematics", image: "./Hedy_Lamarr.jpg" },
+      { name: "Mary Somerville", category: "Science", image: "" },
+      { name: "Grace Hopper", category: "Computing", image: "" }
     ]
   };
 
@@ -122,20 +116,18 @@ const Marie = () => {
       <header className="sticky top-0 z-50 bg-white border-b border-purple-100 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
           <div className="flex items-center space-x-2">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
+            <a href="./home" className="flex items-center space-x-2 cursor-pointer">
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">ViragoVOX</span>
             </a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Our Mission</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Profiles</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Podcast</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Contribute</a>
+            <a href="./mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Our Mission</a>
+            <a href="./gallery" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Gallery</a>
+            <a href="./partnership" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Partner with us</a>
+            <a href="./archive#submit" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Contribute</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">Sign In</Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">Join Us</Button>
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">Support Us</Button>
           </div>
         </div>
       </header>
@@ -146,7 +138,7 @@ const Marie = () => {
           <nav className="flex items-center space-x-2 text-sm">
             <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
             <i className="fas fa-chevron-right text-gray-400"></i>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Profiles</a>
+            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Gallery</a>
             <i className="fas fa-chevron-right text-gray-400"></i>
             <span className="text-gray-700">{profile.name}</span>
           </nav>
@@ -166,7 +158,7 @@ const Marie = () => {
               className="text-purple-200 hover:text-white flex items-center cursor-pointer"
             >
               <i className="fas fa-arrow-left mr-2"></i>
-              Back to Profiles
+              Back to Gallery
             </a>
           </div>
           
@@ -312,35 +304,60 @@ const Marie = () => {
                 </CardContent>
               </Card>
 
-              {/* Detailed Sections */}
-              <div className="space-y-6">
-                {[
-                  { key: 'earlyLife', title: 'Early Life & Education', content: 'Born Maria Sklodowska in Warsaw, Poland, Marie was the youngest of five children. Despite financial hardships and the political oppression of Russian-occupied Poland, she excelled in her studies. Unable to attend university in Poland due to gender restrictions, she worked as a governess to fund her sister\'s medical studies in Paris, with the agreement that her sister would later support her education.' },
-                  { key: 'career', title: 'Career & Contributions', content: 'Marie\'s scientific career began with her doctoral thesis on the mysterious uranium rays discovered by Henri Becquerel. Working in a converted shed with primitive equipment, she and Pierre discovered that the intensity of radiation was proportional to the quantity of radioactive element present, leading to the discovery of polonium and radium. Her meticulous work involved processing tons of pitchblende ore to isolate pure radium.' },
-                  { key: 'achievements', title: 'Major Achievements', content: 'Marie Curie\'s achievements were groundbreaking: she was the first woman to win a Nobel Prize (Physics, 1903), the first person to win Nobel Prizes in two different sciences (Chemistry, 1911), and the first female professor at the University of Paris. She discovered two elements, developed the theory of radioactivity, and founded the field of nuclear chemistry.' },
-                  { key: 'personalLife', title: 'Personal Life', content: 'Marie\'s personal life was marked by both joy and tragedy. Her partnership with Pierre Curie was both romantic and scientific, creating one of history\'s most famous scientific collaborations. After Pierre\'s tragic death in 1906, she continued their work while raising their two daughters, Irène and Ève. Irène would later follow in her mother\'s footsteps, winning a Nobel Prize in Chemistry.' },
-                  { key: 'legacy', title: 'Legacy & Impact', content: 'Marie Curie\'s legacy extends far beyond her scientific discoveries. She broke gender barriers in science, established research institutions that continue to advance cancer treatment, and inspired generations of women to pursue scientific careers. The element curium and the unit of radioactivity "curie" are named in her honor. Her research laid the foundation for modern atomic physics and medical treatments using radiation.' }
-                ].map((section) => (
-                  <Card key={section.key} className="border-none shadow-lg">
-                    <CardHeader>
-                      <Collapsible open={expandedSections[section.key]} onOpenChange={() => toggleSection(section.key)}>
-                        <CollapsibleTrigger className="flex items-center justify-between w-full cursor-pointer">
-                          <CardTitle className="text-xl">{section.title}</CardTitle>
-                          <i className={`fas fa-chevron-${expandedSections[section.key] ? 'up' : 'down'} text-purple-600`}></i>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <CardContent className="pt-6">
+             { /* Detailed Sections */}
+                      <div className="space-y-6">
+                      {[
+                        {
+                        key: 'earlyLife',
+                        title: 'Early Life & Education',
+                        content:
+                          "Ada Lovelace was born Augusta Ada Byron in London, England, in 1815. She was the only legitimate child of the poet Lord Byron and Annabella Milbanke. Her mother, determined to steer Ada away from her father's poetic temperament, ensured she received rigorous tutoring in mathematics and science—an unusual education for a woman of her era. Ada showed an early aptitude for mathematics and logic, corresponding with leading scientists and mathematicians from a young age."
+                        },
+                        {
+                        key: 'career',
+                        title: 'Career & Contributions',
+                        content:
+                          "Ada's most significant professional relationship was with Charles Babbage, the inventor of the Analytical Engine, an early mechanical general-purpose computer. Ada translated an article about the Engine from Italian to English and, at Babbage's suggestion, added her own extensive notes. These notes included what is now recognized as the first published algorithm intended for implementation on a machine, making Ada the world's first computer programmer."
+                        },
+                        {
+                        key: 'achievements',
+                        title: 'Major Achievements',
+                        content:
+                          "Ada Lovelace's notes on the Analytical Engine are considered a foundational text in computer science. She was the first to recognize that the machine could be used for more than just calculations, envisioning its potential to manipulate symbols and create music or art. Her algorithm for computing Bernoulli numbers is widely regarded as the first computer program. Ada's visionary ideas anticipated the future of computing by over a century."
+                        },
+                        {
+                        key: 'personalLife',
+                        title: 'Personal Life',
+                        content:
+                          "Ada married William King-Noel, who later became the Earl of Lovelace, making her the Countess of Lovelace. They had three children together. Despite chronic health problems throughout her life, Ada maintained a strong interest in mathematics and science. She moved in intellectual circles and corresponded with many prominent thinkers of her time."
+                        },
+                        {
+                        key: 'legacy',
+                        title: 'Legacy & Impact',
+                        content:
+                          "Ada Lovelace is celebrated as the first computer programmer and a pioneer of computing. Her insights into the potential of computers went far beyond her contemporaries. The programming language 'Ada' was named in her honor by the U.S. Department of Defense. Ada Lovelace Day is observed annually to recognize the achievements of women in STEM fields, ensuring her legacy continues to inspire future generations."
+                        }
+                      ].map((section) => (
+                        <Card key={section.key} className="border-none shadow-lg">
+                        <CardHeader>
+                          <Collapsible open={expandedSections[section.key]} onOpenChange={() => toggleSection(section.key)}>
+                          <CollapsibleTrigger className="flex items-center justify-between w-full cursor-pointer">
+                            <CardTitle className="text-xl">{section.title}</CardTitle>
+                            <i className={`fas fa-chevron-${expandedSections[section.key] ? 'up' : 'down'} text-purple-600`}></i>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent>
+                            <CardContent className="pt-6">
                             <p className="text-gray-700 leading-relaxed">{section.content}</p>
-                          </CardContent>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    </CardHeader>
-                  </Card>
-                ))}
-              </div>
-            </div>
+                            </CardContent>
+                          </CollapsibleContent>
+                          </Collapsible>
+                        </CardHeader>
+                        </Card>
+                      ))}
+                      </div>
+                    </div>
 
-            {/* Sidebar */}
+                    {/* Sidebar */}
             <div className="space-y-8">
               {/* Quick Facts */}
               <Card className="border-none shadow-lg">
@@ -641,4 +658,4 @@ const Marie = () => {
   );
 };
 
-export default Marie;
+export default AdaLovelace;

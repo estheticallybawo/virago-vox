@@ -309,7 +309,7 @@ return (
             </Badge>
             )}
             </div>
-            <a href="./profile" >
+            <a href="./ada-lovelace" >
             <Button variant="link" className="text-teal-600 hover:text-teal-700 p-0 h-auto text-sm !rounded-button whitespace-nowrap cursor-pointer">
             View profile
             </Button>
@@ -329,7 +329,7 @@ return (
             </div>
             </section>
    {/* Community Submission Portal */}
-            <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-teal-50">
+            <section id="submit" className="py-16 bg-gradient-to-br from-purple-50 via-white to-teal-50">
             <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-bold text-gray-900 mb-3 text-center">Submit Her Story</h2>
