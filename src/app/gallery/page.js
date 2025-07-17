@@ -13,6 +13,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import Link from 'next/link';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const GalleryPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -103,7 +104,7 @@ const GalleryPage = () => {
       years: "1867-1934",
       description: "Physicist and chemist who conducted pioneering research on radioactivity, becoming the first woman to win a Nobel Prize and the only person to win Nobel Prizes in multiple scientific fields.",
       image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Marie%2520Curie%2520in%2520her%2520laboratory%252C%2520wearing%2520period-appropriate%2520clothing%2520from%2520early%25201900s%252C%2520surrounded%2520by%2520scientific%2520equipment%252C%2520with%2520a%2520serious%2520expression%2520conveying%2520her%2520dedication%2520to%2520science%252C%2520neutral%2520background%2520with%2520subtle%2520laboratory%2520elements%252C%2520photorealistic%2520style&width=400&height=500&seq=marie-curie-1&orientation=portrait",
-      URL: "./marie-curie"
+      URL: "./profile/marie-curie"
     },
     {
       id: 2,
@@ -134,7 +135,7 @@ const GalleryPage = () => {
       years: "1815-1852",
       description: "English mathematician and writer, known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognize that the machine had applications beyond pure calculation.",
       image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Ada%2520Lovelace%2520in%2520Victorian%2520era%2520dress%252C%2520sitting%2520at%2520a%2520desk%2520with%2520mathematical%2520papers%2520and%2520early%2520computing%2520concepts%252C%2520elegant%2520pose%2520with%2520thoughtful%2520expression%252C%2520soft%2520lighting%2520highlighting%2520her%2520intelligence%2520and%2520determination%252C%2520neutral%2520background%2520with%2520period%2520appropriate%2520elements&width=400&height=500&seq=ada-lovelace-1&orientation=portrait",
-      URL: "./ada-lovelace"
+      URL: "./profile/ada-lovelace"
     },
 
     {
@@ -216,7 +217,7 @@ const GalleryPage = () => {
       years: "1914-2000",
       description: "Austrian-American actress, inventor, and film producer. At the beginning of World War II, she and composer George Antheil developed a radio guidance system using frequency-hopping spread spectrum technology, which later became the basis for Wi-Fi, Bluetooth, and GPS.",
       image: "https://readdy.ai/api/search-image?query=A%2520professional%2520portrait%2520photograph%2520of%2520Hedy%2520Lamarr%2520in%2520elegant%25201940s%2520attire%252C%2520glamorous%2520Hollywood%2520style%2520combined%2520with%2520an%2520intelligent%2520expression%2520conveying%2520her%2520dual%2520identity%2520as%2520actress%2520and%2520inventor%252C%2520classic%2520studio%2520lighting%2520highlighting%2520her%2520striking%2520features%252C%2520neutral%2520background%2520with%2520subtle%2520technical%2520drawings%2520visible%252C%2520photorealistic%2520style&width=400&height=500&seq=hedy-lamarr-1&orientation=portrait",
-      URL: "./hedy-lamarr"
+      URL: "./profile/hedy-lamarr"
     },
   ];
 
@@ -316,16 +317,16 @@ const GalleryPage = () => {
       <header className="sticky top-0 z-50 bg-white border-b border-purple-100 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
           <div className="flex items-center space-x-2">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="flex items-center space-x-2">
+            <a href="./home" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent">ViragoVOX</span>
             </a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Our Mission</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#archive" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">The Archive</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Podcast</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Contribute</a>
+            <a href="./mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Our Mission</a>
+            <a href="./archive" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">The Archive</a>
+            <a href="./mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Support Us</a>
+            <a href="./home#submit" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Contribute</a>
           </nav>
           <div className="flex items-center space-x-4">
             <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">Sign In</Button>
@@ -339,11 +340,10 @@ const GalleryPage = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center mb-4">
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" 
-              data-readdy="true" 
+              href="./home" 
               className="text-purple-200 hover:text-white flex items-center cursor-pointer"
             >
-              <i className="fas fa-arrow-left mr-2"></i>
+              <FaArrowLeft className="fas fa-arrow-left mr-2"/>
               Back to Home
             </a>
           </div>
@@ -699,12 +699,11 @@ const GalleryPage = () => {
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold">You May Also Be Interested In</h2>
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#archive" 
-              data-readdy="true"
+              href="./gallery" 
               className="text-purple-600 hover:text-purple-800 flex items-center cursor-pointer"
             >
               View All
-              <i className="fas fa-arrow-right ml-2"></i>
+              <FaArrowRight className="fas fa-arrow-right ml-2"/>
             </a>
           </div>
           
@@ -830,11 +829,11 @@ const GalleryPage = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Explore</h3>
               <ul className="space-y-2">
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#archive" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">The Archive</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Podcast</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Events</a></li>
+                <li><a href="./mission" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
+                <li><a href="./archive" className="text-gray-400 hover:text-white transition-colors cursor-pointer">The Archive</a></li>
+                <li><a href="./mission" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Support Us</a></li>
+                <li><a href="./home#submit" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
+                <li><a href="./gallery" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Profiles Gallery</a></li>
               </ul>
             </div>
             <div>

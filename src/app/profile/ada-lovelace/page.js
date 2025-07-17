@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { FaArrowRight } from 'react-icons/fa';
 
 const AdaLovelace = () => {
   const [selectedImage, setSelectedImage] = useState();
@@ -136,9 +137,9 @@ const AdaLovelace = () => {
       <div className="bg-purple-50 py-3">
         <div className="container mx-auto px-4 max-w-7xl">
           <nav className="flex items-center space-x-2 text-sm">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
+            <a href="/home" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
             <i className="fas fa-chevron-right text-gray-400"></i>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Gallery</a>
+            <a href="/gallery" className="text-purple-600 hover:text-purple-800 cursor-pointer">Gallery</a>
             <i className="fas fa-chevron-right text-gray-400"></i>
             <span className="text-gray-700">{profile.name}</span>
           </nav>
@@ -153,8 +154,7 @@ const AdaLovelace = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center mb-6">
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" 
-              data-readdy="true" 
+              href="/gallery"
               className="text-purple-200 hover:text-white flex items-center cursor-pointer"
             >
               <i className="fas fa-arrow-left mr-2"></i>
@@ -517,12 +517,11 @@ const AdaLovelace = () => {
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Explore More Scientists</h2>
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" 
-              data-readdy="true"
+              href="./gallery"
               className="text-purple-600 hover:text-purple-800 flex items-center cursor-pointer"
             >
               View All Profiles
-              <i className="fas fa-arrow-right ml-2"></i>
+              <FaArrowRight className="fas fa-arrow-right ml-2"/>
             </a>
           </div>
           
@@ -600,11 +599,12 @@ const AdaLovelace = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Explore</h3>
               <ul className="space-y-2">
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Profiles Gallery</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Podcast</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Events</a></li>
+                <li><a href="/mission" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
+                <li><a href="/gallery" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Profiles Gallery</a></li>
+                <li><a href="/mission" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Support us</a></li>
+                <li><a href="/home#submit" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
+                <li><a href="/partnership" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Partner with us</a></li>
+                <li><a href="/archive" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Archive</a></li>
               </ul>
             </div>
             <div>

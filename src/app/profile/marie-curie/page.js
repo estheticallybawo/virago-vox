@@ -1,4 +1,4 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
+
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { FaChevronDown } from 'react-icons/fa';
+import { FaArrowRight, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Marie = () => {
   const [selectedImage, setSelectedImage] = useState();
@@ -40,7 +40,7 @@ const Marie = () => {
     region: "Europe",
     field: "Physics & Chemistry",
     mainImage: "https://readdy.ai/api/search-image?query=A%20professional%20portrait%20photograph%20of%20Marie%20Curie%20in%20her%20laboratory%20wearing%20period-appropriate%20clothing%20from%20early%201900s%20surrounded%20by%20scientific%20equipment%20with%20a%20serious%20expression%20conveying%20her%20dedication%20to%20science%20neutral%20background%20with%20subtle%20laboratory%20elements%20photorealistic%20style&width=800&height=600&seq=marie-curie-hero&orientation=landscape",
-    heroImage: "https://readdy.ai/api/search-image?query=A%20beautiful%20vintage%20scientific%20laboratory%20from%20early%201900s%20with%20elegant%20equipment%20and%20instruments%20warm%20golden%20lighting%20creating%20an%20inspiring%20atmosphere%20for%20scientific%20discovery%20with%20subtle%20purple%20and%20amber%20color%20tones%20photorealistic%20style&width=1440&height=600&seq=marie-curie-lab-bg&orientation=landscape",
+    heroImage: "/Viragos.jpg",
     shortBio: "Physicist and chemist who conducted pioneering research on radioactivity, becoming the first woman to win a Nobel Prize and the only person to win Nobel Prizes in multiple scientific fields.",
     fullBio: "Marie Curie was a Polish-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and the only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two different scientific fields. Her achievements included the discovery of the elements polonium and radium, isolation of radium and the study of the nature and compounds of this remarkable element. She founded the Curie Institutes in Paris and Warsaw, which remain major cancer research centers today. During World War I, she developed mobile radiography units to provide X-ray services to field hospitals.",
     keyStats: [
@@ -119,20 +119,20 @@ const Marie = () => {
       <header className="sticky top-0 z-50 bg-white border-b border-purple-100 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
           <div className="flex items-center space-x-2">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">ViragoVOX</span>
+            <a href="/home" className="flex items-center space-x-2 cursor-pointer">
+              
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent">ViragoVOX</span>
             </a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Our Mission</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Profiles</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Podcast</a>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Contribute</a>
+            <a href="/mission" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Our Mission</a>
+            <a href="/gallery" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Gallery</a>
+            <a href="/archive" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Archive</a>
+            <a href="/home#submit" className="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer whitespace-nowrap">Contribute</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 !rounded-button cursor-pointer whitespace-nowrap">Sign In</Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">Join Us</Button>
+           
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white !rounded-button cursor-pointer whitespace-nowrap">Support Us</Button>
           </div>
         </div>
       </header>
@@ -141,10 +141,10 @@ const Marie = () => {
       <div className="bg-purple-50 py-3">
         <div className="container mx-auto px-4 max-w-7xl">
           <nav className="flex items-center space-x-2 text-sm">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
-            <i className="fas fa-chevron-right text-gray-400"></i>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Profiles</a>
-            <i className="fas fa-chevron-right text-gray-400"></i>
+            <a href="/home" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
+            <FaChevronRight className="fas fa-chevron-right text-gray-400"/>
+            <a href="/gallery" className="text-purple-600 hover:text-purple-800 cursor-pointer">Gallery</a>
+            <FaChevronRight className="fas fa-chevron-right text-gray-400"/>
             <span className="text-gray-700">{profile.name}</span>
           </nav>
         </div>
@@ -158,12 +158,11 @@ const Marie = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center mb-6">
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" 
-              data-readdy="true" 
+              href="/gallery"
               className="text-purple-200 hover:text-white flex items-center cursor-pointer"
             >
-              <i className="fas fa-arrow-left mr-2"></i>
-              Back to Profiles
+              <FaChevronLeft className="fas fa-arrow-left mr-2"/>
+              Back to Gallery
             </a>
           </div>
           
@@ -497,12 +496,12 @@ const Marie = () => {
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Explore More Scientists</h2>
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" 
+              href="/gallery" 
               data-readdy="true"
               className="text-purple-600 hover:text-purple-800 flex items-center cursor-pointer"
             >
               View All Profiles
-              <i className="fas fa-arrow-right ml-2"></i>
+              <FaArrowRight className="fas fa-arrow-right ml-2"/>
             </a>
           </div>
           
@@ -580,11 +579,10 @@ const Marie = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Explore</h3>
               <ul className="space-y-2">
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Profiles Gallery</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Podcast</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Events</a></li>
+                <li><a href="/mission" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
+                <li><a href="/gallery" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Gallery</a></li>
+                <li><a href="/archive" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Archive</a></li>
+                <li><a href="/home#submit" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Submit a Profile</a></li>
               </ul>
             </div>
             <div>

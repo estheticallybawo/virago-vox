@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { FaChevronRight } from 'react-icons/fa';
 
 const HedyLamarrProfile = () => {
   const [selectedImage, setSelectedImage] = useState();
@@ -38,8 +39,8 @@ const HedyLamarrProfile = () => {
     era: "20th Century",
     region: "Europe / United States",
     field: "Inventor & Actress",
-    mainImage: "./Hedy_Lamarr.jpg",
-    heroImage: "./Viragos.jpg",
+    mainImage: "/Hedy_Lamarr.jpg",
+    heroImage: "/Viragos.jpg",
     shortBio:
       "Austrian-American actress and inventor, celebrated for her beauty on screen and her pioneering work in wireless communications technology.",
     fullBio:
@@ -81,12 +82,12 @@ const HedyLamarrProfile = () => {
         date: "c. 1942"
       },
       {
-        url: "./HedyLamarr_Movie.jpg",
+        url: "/Hedy_in_Hollywood.jpg",
         caption: "Hedy Lamarr in 'Samson and Delilah'",
         date: "1949"
       },
       {
-        url: "./HedyLamarr_Patent.jpg",
+        url: "/HedyLamarr_Patent.jpg",
         caption: "Patent diagram for frequency-hopping system",
         date: "1942"
       },
@@ -96,8 +97,13 @@ const HedyLamarrProfile = () => {
         date: "c. 1930"
       },
       {
-        url: "./HedyLamarr_Later.jpg",
+        url: "/Hedy_Navy.jpg",
         caption: "Hedy Lamarr later in life",
+        date: "c. 1980"
+      },
+      {
+        url: "/Hedy_with_George.jpg",
+        caption: "Hedy Lamarr with George Antheil, her co-inventor",
         date: "c. 1980"
       }
     ],
@@ -142,10 +148,10 @@ const HedyLamarrProfile = () => {
       <div className="bg-purple-50 py-3">
         <div className="container mx-auto px-4 max-w-7xl">
           <nav className="flex items-center space-x-2 text-sm">
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
-            <i className="fas fa-chevron-right text-gray-400"></i>
-            <a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-purple-600 hover:text-purple-800 cursor-pointer">Gallery</a>
-            <i className="fas fa-chevron-right text-gray-400"></i>
+            <a href="/home" className="text-purple-600 hover:text-purple-800 cursor-pointer">Home</a>
+            <FaChevronRight className="fas fa-chevron-right text-gray-400"/>
+            <a href="/gallery" className="text-purple-600 hover:text-purple-800 cursor-pointer">Gallery</a>
+            <FaChevronRight className="fas fa-chevron-right text-gray-400"/>
             <span className="text-gray-700">{profile.name}</span>
           </nav>
         </div>
@@ -159,8 +165,7 @@ const HedyLamarrProfile = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center mb-6">
             <a 
-              href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" 
-              data-readdy="true" 
+              href="/gallery" 
               className="text-purple-200 hover:text-white flex items-center cursor-pointer"
             >
               <i className="fas fa-arrow-left mr-2"></i>
@@ -523,8 +528,7 @@ const HedyLamarrProfile = () => {
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Explore More Scientists</h2>
             <a 
-              href="./gallery" 
-              data-readdy="true"
+              href="./gallery"
               className="text-purple-600 hover:text-purple-800 flex items-center cursor-pointer"
             >
               View All Profiles
@@ -606,10 +610,10 @@ const HedyLamarrProfile = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Explore</h3>
               <ul className="space-y-2">
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#mission" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/587d36c3-8cf5-4b9e-a2a9-5b5efafc9b37" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Profiles Gallery</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#podcast" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Podcast</a></li>
-                <li><a href="https://readdy.ai/home/06622dde-9fbf-40b1-931a-865cd9fd6d55/095dc71a-145c-42f0-ae58-d068ec099c81#contribute" data-readdy="true" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
+                <li><a href="/mission" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Mission</a></li>
+                <li><a href="/gallery" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Gallery</a></li>
+                <li><a href="/mission"  className="text-gray-400 hover:text-white transition-colors cursor-pointer">Support us</a></li>
+                <li><a href="/home#submit" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contribute</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors cursor-pointer">Events</a></li>
               </ul>
             </div>

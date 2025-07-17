@@ -179,7 +179,7 @@ const FeaturedProfile = () => {
           <div className="flex items-center text-sm text-gray-600">
             <a href="./home" className="hover:text-purple-600 cursor-pointer">Home</a>
             <FaChevronRight className="fa-solid fa-chevron-right text-gray-400 mx-2 text-xs"/>
-            <a href="./archive" data-readdy="true" className="hover:text-purple-600 cursor-pointer">Archive</a>
+            <a href="./archive" className="hover:text-purple-600 cursor-pointer">Archive</a>
             <FaChevronRight className="fa-solid fa-chevron-right text-gray-400 mx-2 text-xs"/>
             <span className="text-purple-600 font-medium">Hedy Lamarr</span>
           </div>
