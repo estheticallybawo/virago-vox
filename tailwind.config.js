@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         sans: ['Mulish', 'sans-serif'],
       },
+      borderRadius: {
+        button: '9999px',
+      },
     },
   },
   plugins: [],
