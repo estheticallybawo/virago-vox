@@ -11,7 +11,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { FaBook, FaBell, FaPenFancy, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 import Link from 'next/link';
-import Swal from 'sweetalert2';
+import dynamic from 'next/dynamic';
+
+// Dynamically import Swal to prevent hydration mismatch
+const Swal = dynamic(() => import('sweetalert2'), { ssr: false });
 
 const Waitlist = () => {
 const [formData, setFormData] = useState({
