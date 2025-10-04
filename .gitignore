@@ -44,3 +44,4 @@ next-env.d.ts
 # development plans and documentation
 backend-development-plan.md
 recommendations/
+.github/
