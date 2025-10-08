@@ -172,7 +172,7 @@ const Marie = () => {
                 <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200 border-none cursor-pointer">
                   {profile.category}
                 </Badge>
-                <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-200 border-none cursor-pointer">
+                <Badge className="bg-tealext-teal-7tealver:bg-teal-20tealder-none cursor-pointer">
                   {profile.era}
                 </Badge>
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 border-none cursor-pointer">
@@ -187,7 +187,7 @@ const Marie = () => {
               <div className="flex flex-wrap gap-4 mb-8">
                 {profile.keyStats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-amber-300">{stat.value}</div>
+                    <div className="text-2xl font-bold text-teal-300">{stat.value}</div>
                     <div className="text-sm text-purple-200">{stat.label}</div>
                   </div>
                 ))}
@@ -195,7 +195,7 @@ const Marie = () => {
               
               <div className="flex flex-wrap gap-4">
                 <Button 
-                  className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap"
+                  className="bg-teal-500 hover:bg-teal-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap"
                   onClick={() => setIsBookmarked(!isBookmarked)}
                 >
                   <i className={`fas ${isBookmarked ? 'fa-bookmark' : 'fa-bookmark-o'} mr-2`}></i>
@@ -293,7 +293,7 @@ const Marie = () => {
                             event.type === 'birth' ? 'bg-green-500' :
                             event.type === 'education' ? 'bg-blue-500' :
                             event.type === 'achievement' ? 'bg-purple-500' :
-                            event.type === 'award' ? 'bg-amber-500' :
+                            event.type === 'award' ? 'bg-teal-500' :
                             event.type === 'service' ? 'bg-indigo-500' :
                             'bg-gray-500'
                           }`}></div>
@@ -541,7 +541,7 @@ const Marie = () => {
             Discover more remarkable women who changed the world through science, courage, and determination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
               Explore More Profiles
             </Button>
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 !rounded-button cursor-pointer whitespace-nowrap">
@@ -558,7 +558,7 @@ const Marie = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">V</div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-amber-300 bg-clip-text text-transparent">ViragoVOX</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-300 bg-clip-text text-transparent">ViragoVOX</span>
               </div>
               <p className="text-gray-400 mb-4">Rewriting history from a woman-centered lens, preserving legacies with the power, elegance, and clarity they deserve.</p>
               <div className="flex space-x-4">

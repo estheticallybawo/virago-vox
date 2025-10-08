@@ -76,34 +76,40 @@ const GalleryPage = () => {
     return regionMap[nationality] || 'Other';
   };
 
+
   // Fetch profiles using your Day 2 schema
-  const fetchProfiles = async () => {
+  const fetchProfiles = async (includeArchived = false) => {
     try {
       setLoading(true);
       setError(null);
       
       console.log('Fetching profiles from Day 2 schema...');
 
-      const { data, error } = await supabase
+      let query = supabase
         .from('profiles')
         .select(`
           *,
           categories:profile_categories(
             category:categories(*)
-          )
-        `)
-        .eq('status', 'published')
-        .order('name');
+          ),
+          timeline_events(*),
+          achievements(*),
+          quotes(*)
+        `);
+        if (!includeArchived){
+          query = query.eq('status', 'published');
+        }
+        const {data: profiles , error} = await query
+        .order('created_at', { ascending: false })
+        .limit(50); 
 
-      if (error) {
-        console.error('Supabase error:', error);
-        throw error;
-      }
+      if (error)  throw error; 
+      console.log('Fetched profiles with relationships:', profiles);
+      setProfiles(profiles || []);
+      
 
-      console.log('Raw profiles data:', data);
-
-      // Transform to match gallery format
-      const transformedProfiles = data?.map(profile => ({
+    // Transform to match gallery format
+    const transformedProfiles = profiles?.map(profile => ({
         id: profile.id,
         name: profile.name,
         category: profile.categories?.[0]?.category?.name || 'Uncategorized',
@@ -131,20 +137,24 @@ const GalleryPage = () => {
   // Fetch categories using Day 2 schema
   const fetchFilterOptions = async () => {
     try {
+       console.log('Fetching categories...');
       const { data: categoriesData, error } = await supabase
         .from('categories')
         .select('*')
         .order('name');
 
+        console.log('Categories query result:', { data: categoriesData, error });
+
       if (error) throw error;
+      console.error('Categories error details:', error);
 
       setCategories([
         { value: "all", label: "All Categories" },
-        ...categoriesData?.map(cat => ({ 
-          value: cat.name, 
-          label: cat.name 
-        })) || []
+        { value: "Science", label: "Science & Technology" },
+        { value: "Arts", label: "Arts & Culture" },
+        { value: "Politics", label: "Politics & Leadership" },      
       ]);
+      return;
 
     } catch (error) {
       console.error('Error fetching categories:', error);

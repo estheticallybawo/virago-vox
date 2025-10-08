@@ -194,7 +194,7 @@ const Archive = () => {
               amplifying the voices of women who have shaped history but have
               too often been forgotten.
             </p>
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
               Add Her Story <i className="fa-solid fa-arrow-right ml-2"></i>
             </Button>
           </div>
@@ -692,7 +692,7 @@ const Archive = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-transparent border-2 border-amber-500 text-amber-400 hover:bg-amber-700 hover:text-white text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap"
+                className="bg-transparent border-2 border-teal-500 text-teal-400 hover:bg-teal-700 hover:text-white text-lg px-8 py-6 !rounded-button cursor-pointer whitespace-nowrap"
               >
                 Buy us Coffee
               </Button>

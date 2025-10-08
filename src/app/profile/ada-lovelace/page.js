@@ -151,7 +151,7 @@ const AdaLovelace = () => {
               href="./home"
               className="flex items-center space-x-2 cursor-pointer"
             >
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent">
                 ViragoVOX
               </span>
             </a>
@@ -237,7 +237,7 @@ const AdaLovelace = () => {
                 <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200 border-none cursor-pointer">
                   {profile.category}
                 </Badge>
-                <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-200 border-none cursor-pointer">
+                <Badge className="bg-teal-100 text-teal-700 hover:bg-teal-200 border-none cursor-pointer">
                   {profile.era}
                 </Badge>
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 border-none cursor-pointer">
@@ -254,7 +254,7 @@ const AdaLovelace = () => {
               <div className="flex flex-wrap gap-4 mb-8">
                 {profile.keyStats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-amber-300">
+                    <div className="text-2xl font-bold text-teal-300">
                       {stat.value}
                     </div>
                     <div className="text-sm text-purple-200">{stat.label}</div>
@@ -264,7 +264,7 @@ const AdaLovelace = () => {
 
               <div className="flex flex-wrap gap-4">
                 <Button
-                  className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap"
+                  className="bg-teal-500 hover:bg-teal-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap"
                   onClick={() => setIsBookmarked(!isBookmarked)}
                 >
                   <i
@@ -395,7 +395,7 @@ const AdaLovelace = () => {
                                 : event.type === "achievement"
                                 ? "bg-purple-500"
                                 : event.type === "award"
-                                ? "bg-amber-500"
+                                ? "bg-teal-500"
                                 : event.type === "service"
                                 ? "bg-indigo-500"
                                 : "bg-gray-500"
@@ -715,7 +715,7 @@ const AdaLovelace = () => {
             science, courage, and determination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-purple-900 font-bold !rounded-button cursor-pointer whitespace-nowrap">
               Explore More Profiles
             </Button>
             <Button
@@ -737,7 +737,7 @@ const AdaLovelace = () => {
                 <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                   V
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-amber-300 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-300 bg-clip-text text-transparent">
                   ViragoVOX
                 </span>
               </div>
